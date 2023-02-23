@@ -23,7 +23,13 @@
       "name": "Pass2",
       "description": "Enable the phase 2 building of the system base",
       "active": false,
-      "dependencies": [],
+      "dependencies": [
+        {
+          "name": "Gcc",
+          "version": "11.2.0",
+          "options": ["Pass2"]
+        }
+      ],
       "downloadLinks": [],
       "md5sums": []
     },
@@ -31,7 +37,13 @@
       "name": "Pass3",
       "description": "Enable the phase 3 building of the system base",
       "active": false,
-      "dependencies": [],
+      "dependencies": [
+        {
+          "name": "Util-Linux",
+          "version": "2.37.2",
+          "options": ["Pass1"]
+        }
+      ],
       "downloadLinks": [],
       "md5sums": []
     }
