@@ -153,10 +153,6 @@ class Target < ISM::Software
         if option("Pass1") || option("Pass2")
             super
         end
-
-        if option("Pass1")
-            setPermissions("#{Ism.settings.sourcesPath}",0o1666)
-        end
     end
 
     def clean
