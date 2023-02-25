@@ -34,9 +34,6 @@ class Target < ISM::Software
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.sourcesPath}")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.toolsPath}")
-            makeLink("usr/bin","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}bin",:symbolicLink)
-            makeLink("usr/lib","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}lib",:symbolicLink)
-            makeLink("usr/sbin","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}sbin",:symbolicLink)
         end
 
         if option("Pass2")
@@ -142,16 +139,24 @@ class Target < ISM::Software
                     setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o600)
                 end
             end
-
-            makeLink("/run","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var/run",:symbolicLinkByOverwrite)
-            makeLink("/run/lock","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var/lock",:symbolicLinkByOverwrite)
-            makeLink("/proc/self/mounts","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/mtab",:symbolicLink)
         end
     end
 
     def install
         if option("Pass1") || option("Pass2")
             super
+        end
+
+        if option("Pass1")
+            makeLink("usr/bin","#{Ism.settings.rootPath}bin",:symbolicLink)
+            makeLink("usr/lib","#{Ism.settings.rootPath}lib",:symbolicLink)
+            makeLink("usr/sbin","#{Ism.settings.rootPath}sbin",:symbolicLink)
+        end
+
+        if option("Pass2")
+            makeLink("/run","#{Ism.settings.rootPath}var/run",:symbolicLinkByOverwrite)
+            makeLink("/run/lock","#{Ism.settings.rootPath}var/lock",:symbolicLinkByOverwrite)
+            makeLink("/proc/self/mounts","#{Ism.settings.rootPath}etc/mtab",:symbolicLink)
         end
     end
 
