@@ -22,7 +22,9 @@ class Target < ISM::Software
     end
 
     def prepareInstallation
-        super
+        if option("Pass1") || option("Pass2")
+            super
+        end
 
         if option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
