@@ -142,6 +142,15 @@ class Target < ISM::Software
                 end
             end
         end
+
+        if option("Pass3")
+            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/info")
+            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/man")
+            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/doc")
+            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib",".la")
+            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libexec",".la")
+            deleteDirectoryRecursively("#{Ism.settings.rootPath}tools")
+        end
     end
 
     def install
@@ -159,17 +168,6 @@ class Target < ISM::Software
             makeLink("/run","#{Ism.settings.rootPath}var/run",:symbolicLinkByOverwrite)
             makeLink("/run/lock","#{Ism.settings.rootPath}var/lock",:symbolicLinkByOverwrite)
             makeLink("/proc/self/mounts","#{Ism.settings.rootPath}etc/mtab",:symbolicLink)
-        end
-    end
-
-    def clean
-        if option("Pass3")
-            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/info")
-            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/man")
-            deleteDirectoryRecursively("#{Ism.settings.rootPath}usr/share/doc")
-            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib",".la")
-            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libexec",".la")
-            deleteDirectoryRecursively("#{Ism.settings.rootPath}tools")
         end
     end
 
