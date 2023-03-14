@@ -171,4 +171,7 @@ class Target < ISM::Software
         end
     end
 
+    def clean
+    end
+
 end
