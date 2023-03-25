@@ -156,6 +156,8 @@ class Target < ISM::Software
     def install
         if option("Pass1") || option("Pass2")
             super
+        else
+            Ism.addInstalledSoftware(@information)
         end
 
         if option("Pass1")
