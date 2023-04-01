@@ -9,7 +9,18 @@
   "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "InitSystem",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Kernel",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
   "options": [
     {
       "name": "Pass1",
