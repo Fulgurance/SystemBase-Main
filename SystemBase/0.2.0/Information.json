@@ -104,6 +104,20 @@
       "md5sums": []
     },
     {
+      "name": "Shell",
+      "description": "Enable shell support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Shell",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
       "name": "Logger",
       "description": "Enable system logger support",
       "active": false,
