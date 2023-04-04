@@ -46,6 +46,104 @@
       ],
       "downloadLinks": [],
       "md5sums": []
+    },
+    {
+      "name": "Bootloader",
+      "description": "Enable bootloader support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Bootloader",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Kernel",
+      "description": "Enable kernel support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Kernel",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Init",
+      "description": "Enable init support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Init",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "FileSystem",
+      "description": "Enable file system support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "FileSystem",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Logger",
+      "description": "Enable system logger support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Logger",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Cron",
+      "description": "Enable cron support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Cron",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "DesktopEnvironment",
+      "description": "Enable desktop environment support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "DesktopEnvironment",
+          "version": "0.2",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
     }
   ]
 }
