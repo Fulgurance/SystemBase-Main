@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Main",
+  "name": "ChrootBase",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to install minimal requirements for a chroot",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/ChrootBase",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gcc",
+      "version": "11.2.0",
+      "options": ["Pass2"]
+    }
+  ],
+  "options": []
+}

@@ -25,9 +25,9 @@
       "active": false,
       "dependencies": [
         {
-          "name": "Gcc",
-          "version": "11.2.0",
-          "options": ["Pass2"]
+          "name": "ChrootBase",
+          "version": "0.2.0",
+          "options": []
         }
       ],
       "downloadLinks": [],
