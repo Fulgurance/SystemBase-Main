@@ -9,7 +9,138 @@
   "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "Binutils",
+      "version": "2.37.0",
+      "options": [],
+    },
+    {
+      "name": "Gcc",
+      "version": "11.2.0",
+      "options": [],
+    },
+    {
+      "name": "Linux-API-Headers",
+      "version": "5.13.12",
+      "options": [],
+    },
+    {
+      "name": "Glibc",
+      "version": "2.34.0",
+      "options": [],
+    },
+    {
+      "name": "Libstdc++",
+      "version": "11.2.0",
+      "options": [],
+    },
+    {
+      "name": "M4",
+      "version": "1.4.19",
+      "options": [],
+    },
+    {
+      "name": "Ncurses",
+      "version": "6.2.0",
+      "options": [],
+    },
+    {
+      "name": "Bash",
+      "version": "5.1.8",
+      "options": [],
+    },
+    {
+      "name": "Coreutils",
+      "version": "8.32.0",
+      "options": [],
+    },
+    {
+      "name": "Diffutils",
+      "version": "3.8.0",
+      "options": [],
+    },
+    {
+      "name": "File",
+      "version": "5.40.0",
+      "options": [],
+    },
+    {
+      "name": "Findutils",
+      "version": "4.8.0",
+      "options": [],
+    },
+    {
+      "name": "Gawk",
+      "version": "5.1.0",
+      "options": [],
+    },
+    {
+      "name": "Grep",
+      "version": "3.7.0",
+      "options": [],
+    },
+    {
+      "name": "Gzip",
+      "version": "1.10.0",
+      "options": [],
+    },
+    {
+      "name": "Make",
+      "version": "4.3.0",
+      "options": [],
+    },
+    {
+      "name": "Patch",
+      "version": "2.7.6",
+      "options": [],
+    },
+    {
+      "name": "Sed",
+      "version": "4.8.0",
+      "options": [],
+    },
+    {
+      "name": "Tar",
+      "version": "1.34.0",
+      "options": [],
+    },
+    {
+      "name": "Xz",
+      "version": "5.2.5",
+      "options": [],
+    },
+    {
+      "name": "Gettext",
+      "version": "0.21.0",
+      "options": [],
+    },
+    {
+      "name": "Bison",
+      "version": "3.7.6",
+      "options": [],
+    },
+    {
+      "name": "Perl",
+      "version": "5.34.0",
+      "options": [],
+    },
+    {
+      "name": "Python",
+      "version": "3.9.6",
+      "options": [],
+    },
+    {
+      "name": "Texinfo",
+      "version": "6.8.0",
+      "options": [],
+    },
+    {
+      "name": "Util-Linux",
+      "version": "2.37.2",
+      "options": [],
+    }
+  ],
   "options": [
     {
       "name": "Pass1",
