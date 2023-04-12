@@ -149,6 +149,11 @@
       "name": "Shadow",
       "version": "4.9.0",
       "options": []
+    },
+    {
+      "name": "Pkg-Config",
+      "version": "0.29.2",
+      "options": []
     }
   ],
   "options": [
