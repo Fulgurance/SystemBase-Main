@@ -139,6 +139,16 @@
       "name": "Util-Linux",
       "version": "2.37.2",
       "options": []
+    },
+    {
+      "name": "Meson",
+      "version": "0.59.1",
+      "options": []
+    },
+    {
+      "name": "Shadow",
+      "version": "4.9.0",
+      "options": []
     }
   ],
   "options": [
