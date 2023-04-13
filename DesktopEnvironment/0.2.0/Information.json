@@ -1,0 +1,14 @@
+{
+  "port": "SystemBase-Main",
+  "name": "DesktopEnvironment",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default desktop environment",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/DesktopEnvironment",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}

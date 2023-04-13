@@ -1,0 +1,85 @@
+{
+  "port": "SystemBase-Main",
+  "name": "FileSystem",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default file systems",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/FileSystem",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Btrfs-Progs",
+      "description": "Enable btrsf-progs support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Btrfs-Progs",
+          "version": "5.13.1",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Dosfstools",
+      "description": "Enable dosfstools support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Dosfstools",
+          "version": "4.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "E2fsprogs",
+      "description": "Enable e2fsprogs support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "E2fsprogs",
+          "version": "1.46.4",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Lvm2",
+      "description": "Enable lvm2 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Lvm2",
+          "version": "2.3.13",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Ntfs-3g",
+      "description": "Enable ntfs-3g support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Ntfs-3g",
+          "version": "0.0.0+22082021",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}

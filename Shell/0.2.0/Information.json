@@ -1,0 +1,29 @@
+{
+  "port": "SystemBase-Main",
+  "name": "Shell",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default shell",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Shell",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Bash",
+      "description": "Enable bash support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Bash",
+          "version": "5.1.8",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}

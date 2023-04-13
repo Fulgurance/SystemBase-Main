@@ -196,12 +196,12 @@
     {
       "name": "Bootloader",
       "description": "Enable bootloader support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Bootloader",
-          "version": "0.2",
-          "options": []
+          "version": "0.2.0",
+          "options": ["Grub"]
         }
       ],
       "downloadLinks": [],
@@ -210,12 +210,12 @@
     {
       "name": "Kernel",
       "description": "Enable kernel support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Kernel",
-          "version": "0.2",
-          "options": []
+          "version": "0.2.0",
+          "options": ["Linux"]
         }
       ],
       "downloadLinks": [],
@@ -224,12 +224,12 @@
     {
       "name": "Init",
       "description": "Enable init support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Init",
-          "version": "0.2",
-          "options": []
+          "version": "0.2.0",
+          "options": ["Openrc"]
         }
       ],
       "downloadLinks": [],
@@ -238,11 +238,11 @@
     {
       "name": "FileSystem",
       "description": "Enable file system support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "FileSystem",
-          "version": "0.2",
+          "version": "0.2.0",
           "options": []
         }
       ],
@@ -252,12 +252,12 @@
     {
       "name": "Shell",
       "description": "Enable shell support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Shell",
-          "version": "0.2",
-          "options": []
+          "version": "0.2.0",
+          "options": ["Bash"]
         }
       ],
       "downloadLinks": [],
@@ -266,12 +266,12 @@
     {
       "name": "Logger",
       "description": "Enable system logger support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Logger",
-          "version": "0.2",
-          "options": []
+          "version": "0.2.0",
+          "options": ["Sysklogd"]
         }
       ],
       "downloadLinks": [],
@@ -280,11 +280,11 @@
     {
       "name": "Cron",
       "description": "Enable cron support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Cron",
-          "version": "0.2",
+          "version": "0.2.0",
           "options": []
         }
       ],
@@ -294,11 +294,11 @@
     {
       "name": "DesktopEnvironment",
       "description": "Enable desktop environment support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "DesktopEnvironment",
-          "version": "0.2",
+          "version": "0.2.0",
           "options": []
         }
       ],

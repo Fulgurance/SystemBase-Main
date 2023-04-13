@@ -1,0 +1,29 @@
+{
+  "port": "SystemBase-Main",
+  "name": "Logger",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default system logger",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Init",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Sysklogd",
+      "description": "Enable sysklogd support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Sysklogd",
+          "version": "1.5.1",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}

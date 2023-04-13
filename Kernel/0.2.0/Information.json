@@ -1,0 +1,29 @@
+{
+  "port": "SystemBase-Main",
+  "name": "Kernel",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default kernel",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Kernel",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Linux",
+      "description": "Enable linux support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Linux",
+          "version": "5.13.12",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}
