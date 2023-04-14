@@ -1,0 +1,29 @@
+{
+  "port": "SystemBase-Main",
+  "name": "WindowManager",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Virtual installer to set the default window manager",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/WindowManager",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "I3",
+      "description": "Enable i3 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "I3",
+          "version": "4.22.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}

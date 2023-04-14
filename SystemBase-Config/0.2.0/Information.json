@@ -1,0 +1,147 @@
+{
+  "port": "SystemBase-Main",
+  "name": "SystemBase-Config",
+  "version": "0.2.0",
+  "architectures": ["x86_64"],
+  "description": "Installer to prepare the system base configuration",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase-Config",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "options": [
+    {
+      "name": "Bootloader",
+      "description": "Enable bootloader support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Bootloader",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Kernel",
+      "description": "Enable kernel support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Kernel",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Init",
+      "description": "Enable init support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Init",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "FileSystem",
+      "description": "Enable file system support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "FileSystem",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Shell",
+      "description": "Enable shell support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Shell",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Logger",
+      "description": "Enable system logger support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Logger",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Cron",
+      "description": "Enable cron support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Cron",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "WindowManager",
+      "description": "Enable window manager support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "WindowManager",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "DesktopEnvironment",
+      "description": "Enable desktop environment support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "DesktopEnvironment",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}
