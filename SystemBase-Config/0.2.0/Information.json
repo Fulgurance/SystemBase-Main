@@ -130,6 +130,20 @@
       "md5sums": []
     },
     {
+      "name": "DisplayManager",
+      "description": "Enable display manager support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "DisplayManager",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
       "name": "DesktopEnvironment",
       "description": "Enable desktop environment support",
       "active": true,
