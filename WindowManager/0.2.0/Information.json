@@ -18,7 +18,21 @@
       "dependencies": [
         {
           "name": "I3",
-          "version": "4.22.0",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Kwin",
+      "description": "Enable kwin support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Kwin",
+          "version": ">=0.0.0",
           "options": []
         }
       ],

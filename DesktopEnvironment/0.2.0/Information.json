@@ -10,5 +10,20 @@
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [],
-  "options": []
+  "options": [
+    {
+      "name": "Plasma-Desktop",
+      "description": "Enable plasma-desktop support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Plasma-Desktop",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
 }

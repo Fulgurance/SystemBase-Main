@@ -18,7 +18,7 @@
       "dependencies": [
         {
           "name": "Btrfs-Progs",
-          "version": "5.13.1",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -32,7 +32,7 @@
       "dependencies": [
         {
           "name": "Dosfstools",
-          "version": "4.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -46,7 +46,7 @@
       "dependencies": [
         {
           "name": "E2fsprogs",
-          "version": "1.46.4",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -60,7 +60,7 @@
       "dependencies": [
         {
           "name": "Lvm2",
-          "version": "2.3.13",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -74,7 +74,7 @@
       "dependencies": [
         {
           "name": "Ntfs-3g",
-          "version": "0.0.0+22082021",
+          "version": ">=0.0.0",
           "options": []
         }
       ],

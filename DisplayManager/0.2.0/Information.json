@@ -10,5 +10,20 @@
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [],
-  "options": []
+  "options": [
+    {
+      "name": "Sddm",
+      "description": "Enable sddm support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Sddm",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
 }
