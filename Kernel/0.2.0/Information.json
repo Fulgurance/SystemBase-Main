@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Virtual installer to set the default kernel",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Kernel",
-  "downloadLinks": [],
-  "md5sums": [],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [],
   "options": [
@@ -22,8 +19,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }

@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Virtual installer to set the default file systems",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/FileSystem",
-  "downloadLinks": [],
-  "md5sums": [],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [],
   "options": [
@@ -22,8 +19,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Dosfstools",
@@ -36,8 +31,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "E2fsprogs",
@@ -50,8 +43,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Lvm2",
@@ -64,8 +55,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Ntfs-3g",
@@ -78,8 +67,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }

@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Virtual installer to set the default cron",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Cron",
-  "downloadLinks": [],
-  "md5sums": [],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [],
   "options": []
