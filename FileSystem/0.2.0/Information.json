@@ -7,6 +7,7 @@
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/FileSystem",
   "installedFiles": [],
   "dependencies": [],
+  "kernelDependencies": [],
   "options": [
     {
       "name": "Btrfs-Progs",

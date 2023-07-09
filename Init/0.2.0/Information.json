@@ -7,11 +7,12 @@
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Init",
   "installedFiles": [],
   "dependencies": [],
+  "kernelDependencies": [],
   "options": [
     {
       "name": "Openrc",
       "description": "Enable openrc support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Openrc",
