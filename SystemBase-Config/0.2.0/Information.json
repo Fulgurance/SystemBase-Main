@@ -2,7 +2,9 @@
   "port": "SystemBase-Main",
   "name": "SystemBase-Config",
   "version": "0.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Installer to prepare the system base configuration",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase-Config",
   "installedFiles": [],
@@ -25,7 +27,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Kernel",
@@ -37,7 +40,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Init",
@@ -49,7 +53,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "FileSystem",
@@ -61,7 +66,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Shell",
@@ -73,7 +79,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Logger",
@@ -85,7 +92,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Cron",
@@ -97,7 +105,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "WindowManager",
@@ -109,7 +118,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "DisplayManager",
@@ -121,7 +131,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "DesktopEnvironment",
@@ -133,7 +144,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

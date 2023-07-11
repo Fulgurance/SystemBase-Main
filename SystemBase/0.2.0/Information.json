@@ -2,7 +2,9 @@
   "port": "SystemBase-Main",
   "name": "SystemBase",
   "version": "0.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Installer to prepare the system base hierarchy",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase",
   "installedFiles": [],
@@ -159,7 +161,8 @@
       "name": "Pass1",
       "description": "Enable the phase 1 building of the system base",
       "active": false,
-      "dependencies": []
+      "dependencies": [],
+      "kernelDependencies": []
     },
     {
       "name": "Pass2",
@@ -171,7 +174,8 @@
           "version": "0.2.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Pass3",
@@ -181,9 +185,12 @@
         {
           "name": "Util-Linux",
           "version": "2.37.2",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

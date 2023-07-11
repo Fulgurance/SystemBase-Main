@@ -2,7 +2,9 @@
   "port": "SystemBase-Main",
   "name": "FileSystem",
   "version": "0.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Virtual installer to set the default file systems",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/FileSystem",
   "installedFiles": [],
@@ -19,7 +21,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Dosfstools",
@@ -31,7 +34,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "E2fsprogs",
@@ -43,7 +47,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Lvm2",
@@ -55,7 +60,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Ntfs-3g",
@@ -67,7 +73,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

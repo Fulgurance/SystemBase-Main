@@ -2,7 +2,9 @@
   "port": "SystemBase-Main",
   "name": "Bootloader",
   "version": "0.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Virtual installer to set the default bootloader",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Bootloader",
   "installedFiles": [],
@@ -19,7 +21,8 @@
           "version": ">=0.0.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }
