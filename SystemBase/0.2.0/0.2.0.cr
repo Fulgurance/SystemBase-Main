@@ -126,7 +126,7 @@ class Target < ISM::Software
             kvm:x:61:
             uuidd:x:80:
             wheel:x:97:
-            nogroup:x:99:
+            nogroup:x:65534:
             users:x:999:
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/group",groupData)
