@@ -17,7 +17,7 @@
       "active": false,
       "dependencies": [
         {
-          "name": "I3",
+          "name": "Xorg-Server",
           "version": ">=0.0.0",
           "options": []
         }
