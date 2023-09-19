@@ -1,0 +1,42 @@
+{
+  "port": "SystemBase-Main",
+  "name": "GraphicalServer",
+  "version": "0.2.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to set the default graphical server",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/GraphicalServer",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Xorg-Server",
+      "description": "Enable xorg-server support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "I3",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Wayland",
+      "description": "Enable wayland support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Wayland-Protocols",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

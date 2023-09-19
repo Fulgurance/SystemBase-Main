@@ -135,6 +135,19 @@
       "kernelDependencies": []
     },
     {
+      "name": "GraphicalServer",
+      "description": "Enable GraphicalServer support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "GraphicalServer",
+          "version": "0.2.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "DesktopEnvironment",
       "description": "Enable desktop environment support",
       "active": true,
