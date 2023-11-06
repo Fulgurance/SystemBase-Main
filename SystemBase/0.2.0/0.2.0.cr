@@ -1,7 +1,7 @@
 class Target < ISM::Software
 
     def initialize
-        super
+        super()
         @newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
                         "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
                         "/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
