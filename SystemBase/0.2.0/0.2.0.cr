@@ -39,7 +39,7 @@ class Target < ISM::Software
         end
 
         if option("Pass2")
-            newDirs = [ "/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
+            @newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
                         "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
                         "/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
                         "/usr/share/man","/usr/share/man1","/usr/share/man2","/usr/share/man3",
@@ -68,22 +68,12 @@ class Target < ISM::Software
                         "/var/opt","/var/spool","/var/lib/color","/var/lib/misc","/var/lib/locate","/root",
                         "/tmp","/var/tmp"]
 
-            changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","#{Ism.settings.toolsPath}","#{Ism.settings.sourcesPath}"]
+            @changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","#{Ism.settings.toolsPath}","#{Ism.settings.sourcesPath}"]
 
-            emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
+            @emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
-            newDirs.each do |dir|
+            @newDirs.each do |dir|
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}")
-                if dir == "/root"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o0750)
-                end
-                if dir == "/tmp" || dir == "/var/tmp"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o1777)
-                end
-            end
-
-            changeOwnerDirs.each do |dir|
-                setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}","root","root")
             end
 
             hostsData = <<-CODE
@@ -131,15 +121,8 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/group",groupData)
 
-            emptyFiles.each do |file|
+            @emptyFiles.each do |file|
                 generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}")
-                if file == "/var/log/lastlog"
-                    setOwner("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",-1,"utmp")
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o664)
-                end
-                if file == "/var/log/btmp"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o600)
-                end
             end
         end
 
@@ -167,6 +150,29 @@ class Target < ISM::Software
         end
 
         if option("Pass2")
+            @newDirs.each do |dir|
+                if dir == "/root"
+                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o0750)
+                end
+                if dir == "/tmp" || dir == "/var/tmp"
+                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o1777)
+                end
+            end
+
+            @changeOwnerDirs.each do |dir|
+                setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}","root","root")
+            end
+
+            @emptyFiles.each do |file|
+                if file == "/var/log/lastlog"
+                    setOwner("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",-1,"utmp")
+                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o664)
+                end
+                if file == "/var/log/btmp"
+                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o600)
+                end
+            end
+
             makeLink("/run","#{Ism.settings.rootPath}var/run",:symbolicLinkByOverwrite)
             makeLink("/run/lock","#{Ism.settings.rootPath}var/lock",:symbolicLinkByOverwrite)
             makeLink("/proc/self/mounts","#{Ism.settings.rootPath}etc/mtab",:symbolicLink)
