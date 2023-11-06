@@ -29,7 +29,7 @@ class Target < ISM::Software
                 "/var/opt","/var/spool","/var/lib/color","/var/lib/misc","/var/lib/locate","/root",
                 "/tmp","/var/tmp"]
 
-    @@changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","#{Ism.settings.toolsPath}","#{Ism.settings.sourcesPath}"]
+    @@changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","#{ISM::Default::Path::ToolsDirectory}","#{ISM::Default::Path::SourcesDirectory}"]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
