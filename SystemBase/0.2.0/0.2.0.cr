@@ -152,24 +152,24 @@ class Target < ISM::Software
         if option("Pass2")
             @@newDirs.each do |dir|
                 if dir == "/root"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o0750)
+                    setPermissions("#{Ism.settings.rootPath}#{dir}",0o0750)
                 end
                 if dir == "/tmp" || dir == "/var/tmp"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o1777)
+                    setPermissions("#{Ism.settings.rootPath}#{dir}",0o1777)
                 end
             end
 
             @@changeOwnerDirs.each do |dir|
-                setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}","root","root")
+                setOwnerRecursively("#{Ism.settings.rootPath}#{dir}","root","root")
             end
 
             @@emptyFiles.each do |file|
                 if file == "/var/log/lastlog"
-                    setOwner("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",-1,"utmp")
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o664)
+                    setOwner("#{Ism.settings.rootPath}#{file}",-1,"utmp")
+                    setPermissions("#{Ism.settings.rootPath}#{file}",0o664)
                 end
                 if file == "/var/log/btmp"
-                    setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o600)
+                    setPermissions("#{Ism.settings.rootPath}#{file}",0o600)
                 end
             end
 
