@@ -1,40 +1,37 @@
 class Target < ISM::Software
 
-    def initialize
-        super()
-        @newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
-                        "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
-                        "/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
-                        "/usr/share/man","/usr/share/man1","/usr/share/man2","/usr/share/man3",
-                        "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
-                        "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
-                        "/usr/local/share/color","/usr/local/share/dict","/usr/local/share/doc",
-                        "/usr/local/share/info","/usr/local/share/locale","/usr/local/share/man",
-                        "/usr/local/share/man1","/usr/local/share/man2","/usr/local/share/man3",
-                        "/usr/local/share/man4","/usr/local/share/man5","/usr/local/share/man6",
-                        "/usr/local/share/man7","/usr/local/share/man8","/usr/local/share/misc",
-                        "/usr/local/share/terminfo","/usr/local/share/zoneinfo","/var/cache","/var/local",
-                        "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
-                        "/var/lib/locate","/root","/tmp","/var/tmp","/dev","/proc","/sys","/run","/boot",
-                        "/home","/mnt","/opt","/srv","/etc/opt","/etc/sysconfig","/lib/firmware",
-                        "/media/floppy","/media/cdrom","/usr/share/color","/usr/share/dict","/usr/share/doc",
-                        "/usr/share/info","/usr/share/locale","/usr/share/man","/usr/share/man1",
-                        "/usr/share/man2","/usr/share/man3","/usr/share/man4","/usr/share/man5",
-                        "/usr/share/man6","/usr/share/man7","/usr/share/man8","/usr/share/misc",
-                        "/usr/share/terminfo","/usr/share/zoneinfo","/usr/local/share/color",
-                        "/usr/local/share/dict","/usr/local/share/doc","/usr/local/share/info",
-                        "/usr/local/share/locale","/usr/local/share/man","/usr/local/share/man1",
-                        "/usr/local/share/man2","/usr/local/share/man3","/usr/local/share/man4",
-                        "/usr/local/share/man5","/usr/local/share/man6","/usr/local/share/man7",
-                        "/usr/local/share/man8","/usr/local/share/misc","/usr/local/share/terminfo",
-                        "/usr/local/share/zoneinfo","/var/cache","/var/local","/var/log","/var/mail",
-                        "/var/opt","/var/spool","/var/lib/color","/var/lib/misc","/var/lib/locate","/root",
-                        "/tmp","/var/tmp"]
+    @@newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
+                "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
+                "/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
+                "/usr/share/man","/usr/share/man1","/usr/share/man2","/usr/share/man3",
+                "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
+                "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
+                "/usr/local/share/color","/usr/local/share/dict","/usr/local/share/doc",
+                "/usr/local/share/info","/usr/local/share/locale","/usr/local/share/man",
+                "/usr/local/share/man1","/usr/local/share/man2","/usr/local/share/man3",
+                "/usr/local/share/man4","/usr/local/share/man5","/usr/local/share/man6",
+                "/usr/local/share/man7","/usr/local/share/man8","/usr/local/share/misc",
+                "/usr/local/share/terminfo","/usr/local/share/zoneinfo","/var/cache","/var/local",
+                "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
+                "/var/lib/locate","/root","/tmp","/var/tmp","/dev","/proc","/sys","/run","/boot",
+                "/home","/mnt","/opt","/srv","/etc/opt","/etc/sysconfig","/lib/firmware",
+                "/media/floppy","/media/cdrom","/usr/share/color","/usr/share/dict","/usr/share/doc",
+                "/usr/share/info","/usr/share/locale","/usr/share/man","/usr/share/man1",
+                "/usr/share/man2","/usr/share/man3","/usr/share/man4","/usr/share/man5",
+                "/usr/share/man6","/usr/share/man7","/usr/share/man8","/usr/share/misc",
+                "/usr/share/terminfo","/usr/share/zoneinfo","/usr/local/share/color",
+                "/usr/local/share/dict","/usr/local/share/doc","/usr/local/share/info",
+                "/usr/local/share/locale","/usr/local/share/man","/usr/local/share/man1",
+                "/usr/local/share/man2","/usr/local/share/man3","/usr/local/share/man4",
+                "/usr/local/share/man5","/usr/local/share/man6","/usr/local/share/man7",
+                "/usr/local/share/man8","/usr/local/share/misc","/usr/local/share/terminfo",
+                "/usr/local/share/zoneinfo","/var/cache","/var/local","/var/log","/var/mail",
+                "/var/opt","/var/spool","/var/lib/color","/var/lib/misc","/var/lib/locate","/root",
+                "/tmp","/var/tmp"]
 
-        @changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","#{Ism.settings.toolsPath}","#{Ism.settings.sourcesPath}"]
+    @@changeOwnerDirs = [ "/usr","/lib","/lib64","/var","/etc","/bin","/sbin","#{Ism.settings.toolsPath}","#{Ism.settings.sourcesPath}"]
 
-        @emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
-    end
+    @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
     def download
     end
