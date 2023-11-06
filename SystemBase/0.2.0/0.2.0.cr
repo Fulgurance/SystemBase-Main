@@ -72,7 +72,7 @@ class Target < ISM::Software
         end
 
         if option("Pass2")
-            @newDirs.each do |dir|
+            @@newDirs.each do |dir|
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}")
             end
 
@@ -121,7 +121,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/group",groupData)
 
-            @emptyFiles.each do |file|
+            @@emptyFiles.each do |file|
                 generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}")
             end
         end
@@ -150,7 +150,7 @@ class Target < ISM::Software
         end
 
         if option("Pass2")
-            @newDirs.each do |dir|
+            @@newDirs.each do |dir|
                 if dir == "/root"
                     setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}",0o0750)
                 end
@@ -159,11 +159,11 @@ class Target < ISM::Software
                 end
             end
 
-            @changeOwnerDirs.each do |dir|
+            @@changeOwnerDirs.each do |dir|
                 setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}","root","root")
             end
 
-            @emptyFiles.each do |file|
+            @@emptyFiles.each do |file|
                 if file == "/var/log/lastlog"
                     setOwner("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",-1,"utmp")
                     setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}",0o664)
