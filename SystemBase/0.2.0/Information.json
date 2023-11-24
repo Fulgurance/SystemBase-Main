@@ -30,11 +30,6 @@
       "options": []
     },
     {
-      "name": "Libstdc++",
-      "version": "11.2.0",
-      "options": []
-    },
-    {
       "name": "M4",
       "version": "1.4.19",
       "options": []
