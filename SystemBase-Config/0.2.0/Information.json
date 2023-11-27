@@ -11,7 +11,7 @@
   "dependencies": [
     {
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.0.0",
       "options": []
     }
   ],
@@ -24,7 +24,7 @@
       "dependencies": [
         {
           "name": "Bootloader",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -37,7 +37,7 @@
       "dependencies": [
         {
           "name": "Kernel",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -50,7 +50,7 @@
       "dependencies": [
         {
           "name": "Init",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -63,7 +63,7 @@
       "dependencies": [
         {
           "name": "FileSystem",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -76,7 +76,7 @@
       "dependencies": [
         {
           "name": "Shell",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -89,7 +89,7 @@
       "dependencies": [
         {
           "name": "Logger",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -102,7 +102,7 @@
       "dependencies": [
         {
           "name": "Cron",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -115,7 +115,7 @@
       "dependencies": [
         {
           "name": "WindowManager",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -128,7 +128,7 @@
       "dependencies": [
         {
           "name": "DisplayManager",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -141,7 +141,7 @@
       "dependencies": [
         {
           "name": "GraphicalServer",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],
@@ -154,7 +154,7 @@
       "dependencies": [
         {
           "name": "DesktopEnvironment",
-          "version": "0.2.0",
+          "version": ">=0.0.0",
           "options": []
         }
       ],

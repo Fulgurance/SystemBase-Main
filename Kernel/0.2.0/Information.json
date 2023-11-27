@@ -38,5 +38,5 @@
       "kernelDependencies": []
     }
   ],
-  "uniqueOptions": []
+  "uniqueOptions": [["Linux","Selinux-Kernel"]]
 }

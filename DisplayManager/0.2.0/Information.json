@@ -12,6 +12,19 @@
   "kernelDependencies": [],
   "options": [
     {
+      "name": "Display-Manager-Init",
+      "description": "Enable display-manager-init support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Display-Manager-Init",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Sddm",
       "description": "Enable sddm support",
       "active": false,
