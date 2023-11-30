@@ -69,6 +69,11 @@ class Target < ISM::Software
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.sourcesPath}")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.toolsPath}")
+
+            if option("Multilib")
+                makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32")
+                makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32")
+            end
         end
 
         if option("Pass2")
@@ -133,6 +138,11 @@ class Target < ISM::Software
             deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib",".la")
             deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libexec",".la")
             deleteDirectoryRecursively("#{Ism.settings.rootPath}tools")
+
+            if option("Multilib")
+                deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib32",".la")
+                deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libx32",".la")
+            end
         end
     end
 
@@ -147,6 +157,11 @@ class Target < ISM::Software
             makeLink("usr/bin","#{Ism.settings.rootPath}bin",:symbolicLink)
             makeLink("usr/lib","#{Ism.settings.rootPath}lib",:symbolicLink)
             makeLink("usr/sbin","#{Ism.settings.rootPath}sbin",:symbolicLink)
+
+            if option("Multilib")
+                makeLink("usr/lib32","#{Ism.settings.rootPath}lib32",:symbolicLink)
+                makeLink("usr/libx32","#{Ism.settings.rootPath}libx32",:symbolicLink)
+            end
         end
 
         if option("Pass2")
@@ -161,6 +176,11 @@ class Target < ISM::Software
 
             @@changeOwnerDirs.each do |dir|
                 setOwnerRecursively("#{Ism.settings.rootPath}#{dir}","root","root")
+            end
+
+            if option("Multilib")
+                setOwnerRecursively("#{Ism.settings.rootPath}/lib32","root","root")
+                setOwnerRecursively("#{Ism.settings.rootPath}/libx32","root","root")
             end
 
             @@emptyFiles.each do |file|

@@ -153,6 +153,13 @@
   "kernelDependencies": [],
   "options": [
     {
+      "name": "Multilib",
+      "description": "Enable multilib support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
       "name": "Pass1",
       "description": "Enable the phase 1 building of the system base",
       "active": false,
