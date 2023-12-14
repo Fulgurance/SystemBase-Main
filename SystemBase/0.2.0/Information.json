@@ -145,7 +145,7 @@
       "options": []
     },
     {
-      "name": "Pkg-Config",
+      "name": "Pkgconf",
       "version": ">=0.0.0",
       "options": []
     }
