@@ -12,6 +12,19 @@
   "kernelDependencies": [],
   "options": [
     {
+      "name": "Bcachefs-Progs",
+      "description": "Enable bcachefs-progs support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Bcachefs-Progs",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Btrfs-Progs",
       "description": "Enable btrsf-progs support",
       "active": false,
