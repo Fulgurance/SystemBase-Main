@@ -274,6 +274,36 @@
       "version": ">=0.1.0",
       "options": []
     },
+    {
+      "name": "@SystemUsers-Main:Root",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Bin",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Daemon",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Messagebus",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Uuid",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Nobody",
+      "version": ">=0.1.0",
+      "options": []
+    }
   ],
   "kernelDependencies": [],
   "options": [
@@ -421,6 +451,36 @@
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
+        {
+          "name": "@SystemUsers-Main:Root",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemUsers-Main:Bin",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemUsers-Main:Daemon",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemUsers-Main:Messagebus",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemUsers-Main:Uuid",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemUsers-Main:Nobody",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        }
       ],
       "kernelDependencies": []
     },
