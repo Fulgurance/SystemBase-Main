@@ -172,10 +172,130 @@
       "active": false,
       "dependencies": [
         {
-          "name": "ChrootBase",
-          "version": ">=0.0.0",
-          "options": []
-        }
+          "name": "@SystemGroups-Main:Root",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Bin",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Sys",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Kmem",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Tape",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Tty",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Daemon",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Floppy",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Disk",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Lp",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Dialout",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Audio",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Video",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Utmp",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Usb",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Cdrom",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Adm",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Messagebus",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Input",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Mail",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Kvm",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Uuid",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Wheel",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Users",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        {
+          "name": "@SystemGroups-Main:Nogroup",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
       ],
       "kernelDependencies": []
     },
