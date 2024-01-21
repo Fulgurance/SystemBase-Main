@@ -250,7 +250,7 @@
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Uuid",
+      "name": "@SystemGroups-Main:Uuidd",
       "version": ">=0.1.0",
       "options": []
     },
@@ -290,7 +290,7 @@
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Uuid",
+      "name": "@SystemUsers-Main:Uuidd",
       "version": ">=0.1.0",
       "options": []
     },
@@ -427,7 +427,7 @@
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Uuid",
+          "name": "@SystemGroups-Main:Uuidd",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
@@ -467,7 +467,7 @@
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Uuid",
+          "name": "@SystemUsers-Main:Uuidd",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
@@ -487,9 +487,7 @@
         {
           "name": "Util-Linux",
           "version": ">=0.0.0",
-          "options": [
-            "Pass1"
-          ]
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []
