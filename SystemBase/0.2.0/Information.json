@@ -20,11 +20,6 @@
       "options": []
     },
     {
-      "name": "Kernel",
-      "version": ">=0.0.0",
-      "options": []
-    },
-    {
       "name": "Glibc",
       "version": ">=0.0.0",
       "options": []
