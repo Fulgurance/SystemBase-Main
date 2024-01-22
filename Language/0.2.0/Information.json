@@ -12,12 +12,12 @@
   "kernelDependencies": [],
   "options": [
     {
-      "name": "Kwin",
-      "description": "Enable kwin support",
-      "active": false,
+      "name": "English",
+      "description": "Enable english support",
+      "active": true,
       "dependencies": [
         {
-          "name": "Kwin",
+          "name": "English",
           "version": ">=0.0.0",
           "options": []
         }

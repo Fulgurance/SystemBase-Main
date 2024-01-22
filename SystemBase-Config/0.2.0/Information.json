@@ -70,6 +70,19 @@
       "kernelDependencies": []
     },
     {
+      "name": "Language",
+      "description": "Enable language support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Language",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Shell",
       "description": "Enable shell support",
       "active": true,
