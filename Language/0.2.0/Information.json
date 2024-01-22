@@ -1,0 +1,29 @@
+{
+  "port": "SystemBase-Main",
+  "name": "Language",
+  "version": "0.2.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Virtual installer to set the default language",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Language",
+  "installedFiles": [],
+  "dependencies": [],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Kwin",
+      "description": "Enable kwin support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Kwin",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
