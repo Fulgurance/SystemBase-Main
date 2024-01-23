@@ -83,6 +83,19 @@
       "kernelDependencies": []
     },
     {
+      "name": "Timezone",
+      "description": "Enable timezone support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Timezone",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Shell",
       "description": "Enable shell support",
       "active": true,
