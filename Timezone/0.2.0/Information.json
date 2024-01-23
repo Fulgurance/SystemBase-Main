@@ -8,7 +8,13 @@
   "description": "Virtual installer to set the default timezone",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Timezone",
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "Tzdata",
+      "version": ">=0.0.0-20231221",
+      "options": []
+    }
+  ],
   "kernelDependencies": [],
   "options": [
     {
