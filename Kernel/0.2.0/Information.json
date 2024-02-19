@@ -39,5 +39,6 @@
     }
   ],
   "uniqueDependencies": [],
-  "uniqueOptions": [["Linux","Selinux-Kernel"]]
+  "uniqueOptions": [["Linux","Selinux-Kernel"]],
+  "selectedDependencies": []
 }

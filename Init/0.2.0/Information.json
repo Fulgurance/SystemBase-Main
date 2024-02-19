@@ -25,5 +25,7 @@
       "kernelDependencies": []
     }
   ],
-  "uniqueOptions": [["Openrc","Systemd"]]
+  "uniqueDependencies": [],
+  "uniqueOptions": [["Openrc","Systemd"]],
+  "selectedDependencies": []
 }
