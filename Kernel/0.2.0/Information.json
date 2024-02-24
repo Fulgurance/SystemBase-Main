@@ -40,5 +40,6 @@
   ],
   "uniqueDependencies": [],
   "uniqueOptions": [["Linux","Selinux-Kernel"]],
-  "selectedDependencies": []
+  "selectedDependencies": [],
+  "allowCodependencies": []
 }
