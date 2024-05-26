@@ -2,14 +2,13 @@
   "port": "SystemBase-Main",
   "name": "Timezone",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default timezone",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Timezone",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemTimezones-Main",
       "name": "Tzdata",
       "version": ">=0.0.0-20231221",
       "options": []
@@ -23,6 +22,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemTimezones-Main",
           "name": "Europe",
           "version": ">=0.0.0",
           "options": []

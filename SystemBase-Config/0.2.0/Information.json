@@ -2,14 +2,13 @@
   "port": "SystemBase-Main",
   "name": "SystemBase-Config",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Installer to prepare the system base configuration",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase-Config",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.0.0",
       "options": []
@@ -23,6 +22,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Bootloader",
           "version": ">=0.0.0",
           "options": []
@@ -36,6 +36,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Kernel",
           "version": ">=0.0.0",
           "options": []
@@ -49,6 +50,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Init",
           "version": ">=0.0.0",
           "options": []
@@ -62,6 +64,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "FileSystem",
           "version": ">=0.0.0",
           "options": []
@@ -75,6 +78,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Language",
           "version": ">=0.0.0",
           "options": []
@@ -88,6 +92,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Timezone",
           "version": ">=0.0.0",
           "options": []
@@ -101,6 +106,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Shell",
           "version": ">=0.0.0",
           "options": []
@@ -114,6 +120,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Logger",
           "version": ">=0.0.0",
           "options": []
@@ -127,6 +134,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "Cron",
           "version": ">=0.0.0",
           "options": []
@@ -140,6 +148,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "WindowManager",
           "version": ">=0.0.0",
           "options": []
@@ -153,6 +162,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "DisplayManager",
           "version": ">=0.0.0",
           "options": []
@@ -166,6 +176,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "GraphicalServer",
           "version": ">=0.0.0",
           "options": []
@@ -179,6 +190,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "DesktopEnvironment",
           "version": ">=0.0.0",
           "options": []

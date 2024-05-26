@@ -2,9 +2,7 @@
   "port": "SystemBase-Main",
   "name": "Shell",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default shell",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Shell",
   "installedFiles": [],
@@ -17,6 +15,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Shells-Main",
           "name": "Bash",
           "version": ">=0.0.0",
           "options": []

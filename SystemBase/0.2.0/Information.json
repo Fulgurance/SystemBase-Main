@@ -2,300 +2,356 @@
   "port": "SystemBase-Main",
   "name": "SystemBase",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Installer to prepare the system base hierarchy",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
       "name": "Binutils",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Gcc",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Glibc",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "M4",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Ncurses",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Shells-Main",
       "name": "Bash",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Coreutils",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Diffutils",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "File",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Findutils",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Gawk",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Grep",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Archivers-Main",
       "name": "Gzip",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Make",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Patch",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Sed",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Archivers-Main",
       "name": "Tar",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Archivers-Main",
       "name": "Xz",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Gettext",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Bison",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingLanguages-Main",
       "name": "Perl",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingLanguages-Main",
       "name": "Python",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Texinfo",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Util-Linux",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Meson",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "Security-Main",
       "name": "Shadow",
       "version": ">=0.0.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Pkgconf",
       "version": ">=0.0.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Root",
+      "port": "SystemGroups-Main",
+      "name": "Root",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Bin",
+      "port": "SystemGroups-Main",
+      "name": "Bin",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Sys",
+      "port": "SystemGroups-Main",
+      "name": "Sys",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Kmem",
+      "port": "SystemGroups-Main",
+      "name": "Kmem",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Tape",
+      "port": "SystemGroups-Main",
+      "name": "Tape",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Tty",
+      "port": "SystemGroups-Main",
+      "name": "Tty",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Daemon",
+      "port": "SystemGroups-Main",
+      "name": "Daemon",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Floppy",
+      "port": "SystemGroups-Main",
+      "name": "Floppy",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Disk",
+      "port": "SystemGroups-Main",
+      "name": "Disk",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Lp",
+      "port": "SystemGroups-Main",
+      "name": "Lp",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Dialout",
+      "port": "SystemGroups-Main",
+      "name": "Dialout",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Audio",
+      "port": "SystemGroups-Main",
+      "name": "Audio",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Video",
+      "port": "SystemGroups-Main",
+      "name": "Video",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Utmp",
+      "port": "SystemGroups-Main",
+      "name": "Utmp",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Usb",
+      "port": "SystemGroups-Main",
+      "name": "Usb",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Cdrom",
+      "port": "SystemGroups-Main",
+      "name": "Cdrom",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Adm",
+      "port": "SystemGroups-Main",
+      "name": "Adm",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Messagebus",
+      "port": "SystemGroups-Main",
+      "name": "Messagebus",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Input",
+      "port": "SystemGroups-Main",
+      "name": "Input",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Mail",
+      "port": "SystemGroups-Main",
+      "name": "Mail",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Kvm",
+      "port": "SystemGroups-Main",
+      "name": "Kvm",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Uuidd",
+      "port": "SystemGroups-Main",
+      "name": "Uuidd",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Wheel",
+      "port": "SystemGroups-Main",
+      "name": "Wheel",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Users",
+      "port": "SystemGroups-Main",
+      "name": "Users",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Nogroup",
+      "port": "SystemGroups-Main",
+      "name": "Nogroup",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Root",
+      "port": "SystemUsers-Main",
+      "name": "Root",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Bin",
+      "port": "SystemUsers-Main",
+      "name": "Bin",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Daemon",
+      "port": "SystemUsers-Main",
+      "name": "Daemon",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Messagebus",
+      "port": "SystemUsers-Main",
+      "name": "Messagebus",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Uuidd",
+      "port": "SystemUsers-Main",
+      "name": "Uuidd",
       "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Nobody",
+      "port": "SystemUsers-Main",
+      "name": "Nobody",
       "version": ">=0.1.0",
       "options": []
     }
@@ -322,157 +378,187 @@
       "active": false,
       "dependencies": [
         {
-          "name": "@SystemGroups-Main:Root",
+          "port": "SystemGroups-Main",
+          "name": "Root",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Bin",
+          "port": "SystemGroups-Main",
+          "name": "Bin",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Sys",
+          "port": "SystemGroups-Main",
+          "name": "Sys",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Kmem",
+          "port": "SystemGroups-Main",
+          "name": "Kmem",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Tape",
+          "port": "SystemGroups-Main",
+          "name": "Tape",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Tty",
+          "port": "SystemGroups-Main",
+          "name": "Tty",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Daemon",
+          "port": "SystemGroups-Main",
+          "name": "Daemon",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Floppy",
+          "port": "SystemGroups-Main",
+          "name": "Floppy",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Disk",
+          "port": "SystemGroups-Main",
+          "name": "Disk",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Lp",
+          "port": "SystemGroups-Main",
+          "name": "Lp",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Dialout",
+          "port": "SystemGroups-Main",
+          "name": "Dialout",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Audio",
+          "port": "SystemGroups-Main",
+          "name": "Audio",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Video",
+          "port": "SystemGroups-Main",
+          "name": "Video",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Utmp",
+          "port": "SystemGroups-Main",
+          "name": "Utmp",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Usb",
+          "port": "SystemGroups-Main",
+          "name": "Usb",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Cdrom",
+          "port": "SystemGroups-Main",
+          "name": "Cdrom",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Adm",
+          "port": "SystemGroups-Main",
+          "name": "Adm",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Messagebus",
+          "port": "SystemGroups-Main",
+          "name": "Messagebus",
+          "version": ">=0.1.0",
+          "options": ["Pass1"]
+        },
+        { "port": "SystemGroups-Main",
+          "name": "Input",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Input",
+          "port": "SystemGroups-Main",
+          "name": "Mail",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Mail",
+          "port": "SystemGroups-Main",
+          "name": "Kvm",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Kvm",
+          "port": "SystemGroups-Main",
+          "name": "Uuidd",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Uuidd",
+          "port": "SystemGroups-Main",
+          "name": "Wheel",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Wheel",
+          "port": "SystemGroups-Main",
+          "name": "Users",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Users",
+          "port": "SystemGroups-Main",
+          "name": "Nogroup",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemGroups-Main:Nogroup",
+          "port": "SystemUsers-Main",
+          "name": "Root",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Root",
+          "port": "SystemUsers-Main",
+          "name": "Bin",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Bin",
+          "port": "SystemUsers-Main",
+          "name": "Daemon",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Daemon",
+          "port": "SystemUsers-Main",
+          "name": "Messagebus",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Messagebus",
+          "port": "SystemUsers-Main",
+          "name": "Uuidd",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         },
         {
-          "name": "@SystemUsers-Main:Uuidd",
-          "version": ">=0.1.0",
-          "options": ["Pass1"]
-        },
-        {
-          "name": "@SystemUsers-Main:Nobody",
+          "port": "SystemUsers-Main",
+          "name": "Nobody",
           "version": ">=0.1.0",
           "options": ["Pass1"]
         }
@@ -485,6 +571,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Util-Linux",
           "version": ">=0.0.0",
           "options": ["Pass1"]

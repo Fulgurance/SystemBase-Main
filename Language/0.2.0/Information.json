@@ -2,9 +2,7 @@
   "port": "SystemBase-Main",
   "name": "Language",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default language",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Language",
   "installedFiles": [],
@@ -17,6 +15,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "SystemLanguages-Main",
           "name": "English",
           "version": ">=0.0.0",
           "options": []

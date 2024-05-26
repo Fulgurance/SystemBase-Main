@@ -2,9 +2,7 @@
   "port": "SystemBase-Main",
   "name": "GraphicalServer",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default graphical server",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/GraphicalServer",
   "installedFiles": [],
@@ -17,6 +15,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "XorgBase-Main",
           "name": "Xorg-Server",
           "version": ">=0.0.0",
           "options": []
@@ -30,6 +29,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "GraphicsLibraries-Main",
           "name": "Wayland-Protocols",
           "version": ">=0.0.0",
           "options": []

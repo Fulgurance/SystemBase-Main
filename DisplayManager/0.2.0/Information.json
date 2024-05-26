@@ -2,9 +2,7 @@
   "port": "SystemBase-Main",
   "name": "DisplayManager",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default DisplayManager",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/DisplayManager",
   "installedFiles": [],
@@ -17,6 +15,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "DisplayManager-Main",
           "name": "Display-Manager-Init",
           "version": ">=0.0.0",
           "options": []
@@ -30,6 +29,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "DisplayManager-Main",
           "name": "Sddm",
           "version": ">=0.0.0",
           "options": []

@@ -2,9 +2,7 @@
   "port": "SystemBase-Main",
   "name": "Kernel",
   "version": "0.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Virtual installer to set the default kernel",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Kernel",
   "installedFiles": [],
@@ -17,6 +15,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Kernels-Main",
           "name": "Linux",
           "version": ">=0.0.0",
           "options": []
@@ -30,6 +29,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Kernels-Main",
           "name": "Selinux-Kernel",
           "version": ">=0.0.0",
           "options": []
