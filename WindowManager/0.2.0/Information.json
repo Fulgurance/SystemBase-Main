@@ -29,7 +29,7 @@
       "active": false,
       "dependencies": [
         {
-          "port": "WindowManagers-Main",
+          "port": "KdeSoftwares-Main",
           "name": "Kwin",
           "version": ">=0.0.0",
           "options": []
