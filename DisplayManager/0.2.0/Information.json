@@ -15,7 +15,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "DisplayManager-Main",
+          "port": "DisplayManagers-Main",
           "name": "Display-Manager-Init",
           "version": ">=0.0.0",
           "options": []
@@ -29,7 +29,7 @@
       "active": false,
       "dependencies": [
         {
-          "port": "DisplayManager-Main",
+          "port": "DisplayManagers-Main",
           "name": "Sddm",
           "version": ">=0.0.0",
           "options": []
