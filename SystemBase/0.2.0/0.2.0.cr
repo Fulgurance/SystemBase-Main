@@ -74,6 +74,32 @@ class Target < ISM::Software
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32")
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32")
             end
+
+            lsbReleaseData = <<-CODE
+            DISTRIB_ID=
+            DISTRIB_RELEASE=
+            DISTRIB_CODENAME=
+            DISTRIB_DESCRIPTION=
+            CODE
+            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
+
+            osReleaseData = <<-CODE
+            NAME=
+            VERSION=
+            ID=
+            VERSION_ID=
+            PRETTY_NAME=
+            ANSI_COLOR=
+            CPE_NAME=
+            HOME_URL=
+            SUPPORT_URL=
+            BUG_REPORT_URL=
+            PRIVACY_POLICY_URL=
+            BUILD_ID=
+            VARIANT=
+            VARIANT_ID=
+            CODE
+            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
         end
 
         if option("Pass2")
