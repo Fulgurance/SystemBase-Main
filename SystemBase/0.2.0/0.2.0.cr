@@ -76,28 +76,28 @@ class Target < ISM::Software
             end
 
             lsbReleaseData = <<-CODE
-            DISTRIB_ID=
-            DISTRIB_RELEASE=
-            DISTRIB_CODENAME=
-            DISTRIB_DESCRIPTION=
+            DISTRIB_ID="#{Ism.settings.id}"
+            DISTRIB_RELEASE=#{Ism.settings.release}"
+            DISTRIB_CODENAME=#{Ism.settings.codeName}"
+            DISTRIB_DESCRIPTION=#{Ism.settings.description}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
 
             osReleaseData = <<-CODE
-            NAME=
-            VERSION=
-            ID=
-            VERSION_ID=
-            PRETTY_NAME=
-            ANSI_COLOR=
-            CPE_NAME=
-            HOME_URL=
-            SUPPORT_URL=
-            BUG_REPORT_URL=
-            PRIVACY_POLICY_URL=
-            BUILD_ID=
-            VARIANT=
-            VARIANT_ID=
+            NAME="#{Ism.settings.name}"
+            VERSION="#{Ism.settings.version}"
+            ID="#{Ism.settings.id}"
+            VERSION_ID="#{Ism.settings.versionId}"
+            PRETTY_NAME="#{Ism.settings.fullName}"
+            ANSI_COLOR="#{Ism.settings.ansiColor}"
+            CPE_NAME="#{Ism.settings.cpeName}"
+            HOME_URL="#{Ism.settings.homeUrl}"
+            SUPPORT_URL="#{Ism.settings.supportUrl}"
+            BUG_REPORT_URL="#{Ism.settings.bugReportUrl}"
+            PRIVACY_POLICY_URL="#{Ism.settings.privacyPolicyUrl}"
+            BUILD_ID="#{Ism.settings.buildId}"
+            VARIANT="#{Ism.settings.variant}"
+            VARIANT_ID="#{Ism.settings.variantId}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
         end
@@ -122,13 +122,18 @@ class Target < ISM::Software
             deleteDirectory("#{Ism.settings.rootPath}usr/share/info")
             deleteDirectory("#{Ism.settings.rootPath}usr/share/man")
             deleteDirectory("#{Ism.settings.rootPath}usr/share/doc")
-            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib",".la")
-            deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libexec",".la")
             deleteDirectory("#{Ism.settings.rootPath}tools")
 
+            deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/lib",
+                                                extensions: [".la"])
+            deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/libexec",
+                                                extensions: [".la"])
+
             if option("Multilib")
-                deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/lib32",".la")
-                deleteAllFilesRecursivelyFinishing("#{Ism.settings.rootPath}usr/libx32",".la")
+                deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/lib32",
+                                                    extensions: [".la"])
+                deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/libx32",
+                                                    extensions: [".la"])
             end
         end
     end
