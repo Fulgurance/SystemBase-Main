@@ -81,7 +81,7 @@ class Target < ISM::Software
             DISTRIB_CODENAME=
             DISTRIB_DESCRIPTION=
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
 
             osReleaseData = <<-CODE
             NAME=
@@ -99,7 +99,7 @@ class Target < ISM::Software
             VARIANT=
             VARIANT_ID=
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
         end
 
         if option("Pass2")
