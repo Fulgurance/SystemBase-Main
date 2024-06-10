@@ -154,29 +154,30 @@ class Target < ISM::Software
         if option("Pass2")
             @@newDirs.each do |dir|
                 if dir == "/root"
-                    setPermissions("#{Ism.settings.rootPath}#{dir}",0o0750)
+                    runChmodCommand(["0750","#{Ism.settings.rootPath}#{dir}"])
                 end
                 if dir == "/tmp" || dir == "/var/tmp"
-                    setPermissions("#{Ism.settings.rootPath}#{dir}",0o1777)
+                    runChmodCommand(["1777","#{Ism.settings.rootPath}#{dir}"])
                 end
             end
 
             @@changeOwnerDirs.each do |dir|
-                setOwnerRecursively("#{Ism.settings.rootPath}#{dir}","root","root")
+                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}#{dir}"])
+                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}#{dir}"])
             end
 
             if option("Multilib")
-                setOwnerRecursively("#{Ism.settings.rootPath}/lib32","root","root")
-                setOwnerRecursively("#{Ism.settings.rootPath}/libx32","root","root")
+                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}/lib32"])
+                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}/lib32"])
             end
 
             @@emptyFiles.each do |file|
                 if file == "/var/log/lastlog"
-                    setOwner("#{Ism.settings.rootPath}#{file}",-1,"utmp")
-                    setPermissions("#{Ism.settings.rootPath}#{file}",0o664)
+                    runChownCommand([":utmp","#{Ism.settings.rootPath}#{file}"])
+                    runChmodCommand(["0664","#{Ism.settings.rootPath}#{file}"])
                 end
                 if file == "/var/log/btmp"
-                    setPermissions("#{Ism.settings.rootPath}#{file}",0o600)
+                    runChmodCommand(["0600","#{Ism.settings.rootPath}#{file}"])
                 end
             end
 
