@@ -8,36 +8,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": []
-    },
-    {
-      "port": "Utilities-Main",
-      "name": "Bc",
-      "version": ">=5.0.0",
-      "options": []
-    },
-    {
-      "port": "Utilities-Main",
-      "name": "Kmod",
-      "version": ">=29.0.0",
-      "options": []
-    },
-    {
-      "port": "BaseLibraries-Main",
-      "name": "Libelf",
-      "version": ">=0.185.0",
-      "options": []
-    },
-    {
-      "port": "Security-Main",
-      "name": "Openssl",
-      "version": ">=1.1.1+l",
-      "options": []
-    },
-    {
       "port": "Kernels-Main",
       "name": "Linux-Kernel-Sources",
       "version": ">=0.0.0",
@@ -51,22 +21,7 @@
     }
   ],
   "kernelDependencies": [],
-  "options": [
-    {
-      "name": "Pass1",
-      "description": "Enable the phase 1 building of the system base",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "ProgrammingTools-Main",
-          "name": "Gcc",
-          "version": ">=0.0.0",
-          "options": ["Pass1"]
-        }
-      ],
-      "kernelDependencies": []
-    }
-  ],
+  "options": [],
   "uniqueDependencies": [["@Kernels-Main:Linux-Kernel-Sources","@Kernels-Main:Selinux-Kernel-Sources"]],
   "uniqueOptions": [],
   "selectedDependencies": [],
