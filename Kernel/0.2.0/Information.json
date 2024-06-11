@@ -36,6 +36,18 @@
       "name": "Openssl",
       "version": ">=1.1.1+l",
       "options": []
+    },
+    {
+      "port": "Kernels-Main",
+      "name": "Linux-Kernel-Sources",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Kernels-Main",
+      "name": "Selinux-Kernel-Sources",
+      "version": ">=0.0.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
@@ -53,38 +65,10 @@
         }
       ],
       "kernelDependencies": []
-    },
-    {
-      "name": "Linux-Kernel-Sources",
-      "description": "Enable linux support",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "Kernels-Main",
-          "name": "Linux-Kernel-Sources",
-          "version": ">=0.0.0",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Selinux-Kernel-Sources",
-      "description": "Enable selinux-linux support",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "Kernels-Main",
-          "name": "Selinux-Kernel-Sources",
-          "version": ">=0.0.0",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
     }
   ],
-  "uniqueDependencies": [],
-  "uniqueOptions": ["@Kernels-Main:Linux-Kernel-Sources","Kernels-Main:Selinux-Kernel-Sources"],
+  "uniqueDependencies": ["@Kernels-Main:Linux-Kernel-Sources","Kernels-Main:Selinux-Kernel-Sources"],
+  "uniqueOptions": [],
   "selectedDependencies": [],
   "allowCodependencies": []
 }
