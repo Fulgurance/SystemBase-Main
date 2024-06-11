@@ -76,28 +76,28 @@ class Target < ISM::Software
             end
 
             lsbReleaseData = <<-CODE
-            DISTRIB_ID="#{Ism.settings.id}"
-            DISTRIB_RELEASE=#{Ism.settings.release}"
-            DISTRIB_CODENAME=#{Ism.settings.codeName}"
-            DISTRIB_DESCRIPTION=#{Ism.settings.description}"
+            DISTRIB_ID="#{Ism.settings.systemId}"
+            DISTRIB_RELEASE=#{Ism.settings.systemRelease}"
+            DISTRIB_CODENAME=#{Ism.settings.systemCodeName}"
+            DISTRIB_DESCRIPTION=#{Ism.settings.systemDescription}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
 
             osReleaseData = <<-CODE
-            NAME="#{Ism.settings.name}"
-            VERSION="#{Ism.settings.version}"
-            ID="#{Ism.settings.id}"
-            VERSION_ID="#{Ism.settings.versionId}"
-            PRETTY_NAME="#{Ism.settings.fullName}"
-            ANSI_COLOR="#{Ism.settings.ansiColor}"
-            CPE_NAME="#{Ism.settings.cpeName}"
-            HOME_URL="#{Ism.settings.homeUrl}"
-            SUPPORT_URL="#{Ism.settings.supportUrl}"
-            BUG_REPORT_URL="#{Ism.settings.bugReportUrl}"
-            PRIVACY_POLICY_URL="#{Ism.settings.privacyPolicyUrl}"
-            BUILD_ID="#{Ism.settings.buildId}"
-            VARIANT="#{Ism.settings.variant}"
-            VARIANT_ID="#{Ism.settings.variantId}"
+            NAME="#{Ism.settings.systemName}"
+            VERSION="#{Ism.settings.systemVersion}"
+            ID="#{Ism.settings.systemId}"
+            VERSION_ID="#{Ism.settings.systemVersionId}"
+            PRETTY_NAME="#{Ism.settings.systemFullName}"
+            ANSI_COLOR="#{Ism.settings.systemAnsiColor}"
+            CPE_NAME="#{Ism.settings.systemCpeName}"
+            HOME_URL="#{Ism.settings.systemHomeUrl}"
+            SUPPORT_URL="#{Ism.settings.systemSupportUrl}"
+            BUG_REPORT_URL="#{Ism.settings.systemBugReportUrl}"
+            PRIVACY_POLICY_URL="#{Ism.settings.systemPrivacyPolicyUrl}"
+            BUILD_ID="#{Ism.settings.systemBuildId}"
+            VARIANT="#{Ism.settings.systemVariant}"
+            VARIANT_ID="#{Ism.settings.systemVariantId}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
         end
