@@ -3,14 +3,16 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        #Generate headers
-        makeSource(["mrproper"], path: mainKernelSourcesPath)
-        makeSource(["headers"], path: mainKernelSourcesPath)
+        mainKernelSourcesPath = "/usr/src/#{mainKernelName}"
 
         #Make link for the current kernel documentation
         makeLink("/usr/src/main-kernel-sources/Documentation", "/usr/share/doc/main-kernel-documentation", :symbolicLinkByOverwrite)
         #Make link for the current running kernel sources
-        makeLink("/usr/src/#{mainKernelName}", "/usr/src/main-kernel-sources", :symbolicLinkByOverwrite)
+        makeLink(mainKernelSourcesPath, "/usr/src/main-kernel-sources", :symbolicLinkByOverwrite)
+
+        #Generate headers
+        makeSource(["mrproper"], path: mainKernelSourcesPath)
+        makeSource(["headers"], path: mainKernelSourcesPath)
 
         ################################################################################
         #This method is temporary before a proper one is implemented to get directories#
