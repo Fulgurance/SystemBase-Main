@@ -6,17 +6,62 @@
   "description": "Virtual installer to set the default kernel",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Kernel",
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Bc",
+      "version": ">=5.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Kmod",
+      "version": ">=29.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libelf",
+      "version": ">=0.185.0",
+      "options": []
+    },
+    {
+      "port": "Security-Main",
+      "name": "Openssl",
+      "version": ">=1.1.1+l",
+      "options": []
+    }
+  ],
   "kernelDependencies": [],
   "options": [
     {
-      "name": "Linux",
+      "name": "Pass1",
+      "description": "Enable the phase 1 building of the system base",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "ProgrammingTools-Main",
+          "name": "Gcc",
+          "version": ">=0.0.0",
+          "options": ["Pass1"]
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Linux-Kernel-Sources",
       "description": "Enable linux support",
       "active": false,
       "dependencies": [
         {
           "port": "Kernels-Main",
-          "name": "Linux",
+          "name": "Linux-Kernel-Sources",
           "version": ">=0.0.0",
           "options": []
         }
@@ -24,13 +69,13 @@
       "kernelDependencies": []
     },
     {
-      "name": "Selinux-Kernel",
+      "name": "Selinux-Kernel-Sources",
       "description": "Enable selinux-linux support",
       "active": false,
       "dependencies": [
         {
           "port": "Kernels-Main",
-          "name": "Selinux-Kernel",
+          "name": "Selinux-Kernel-Sources",
           "version": ">=0.0.0",
           "options": []
         }
@@ -39,7 +84,7 @@
     }
   ],
   "uniqueDependencies": [],
-  "uniqueOptions": [["Linux","Selinux-Kernel"]],
+  "uniqueOptions": ["@Kernels-Main:Linux-Kernel-Sources","Kernels-Main:Selinux-Kernel-Sources"],
   "selectedDependencies": [],
   "allowCodependencies": []
 }
