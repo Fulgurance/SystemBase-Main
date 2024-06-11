@@ -24,16 +24,17 @@ class Target < ISM::VirtualSoftware
 
         #Make link for the current running kernel sources
         makeLink("/usr/src/#{mainKernelName}", "/usr/src/main-kernel-sources", :symbolicLinkByOverwrite)
-
-        linkKernelHeaders
     end
 
     def install
         super
 
-        if !option("Pass1")
+        linkKernelHeaders
+        #Needed ?
+        #Record links and dirs ?
+        #if !option("Pass1")
             updateKernelOptionsDatabase
-        end
+        #end
     end
 
 end
