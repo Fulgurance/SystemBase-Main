@@ -67,7 +67,7 @@
       "kernelDependencies": []
     }
   ],
-  "uniqueDependencies": ["@Kernels-Main:Linux-Kernel-Sources","@Kernels-Main:Selinux-Kernel-Sources"],
+  "uniqueDependencies": [["@Kernels-Main:Linux-Kernel-Sources","@Kernels-Main:Selinux-Kernel-Sources"]],
   "uniqueOptions": [],
   "selectedDependencies": [],
   "allowCodependencies": []
