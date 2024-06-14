@@ -6,13 +6,21 @@ class Target < ISM::VirtualSoftware
         mainKernelSourcesPath = "/usr/src/#{mainKernelName}"
 
         #Make link for the current kernel documentation
-        makeLink("/usr/src/main-kernel-sources/Documentation", "/usr/share/doc/main-kernel-documentation", :symbolicLinkByOverwrite)
+        makeLink(   target: "/usr/src/main-kernel-sources/Documentation",
+                    path:   "/usr/share/doc/main-kernel-documentation",
+                    type:   :symbolicLinkByOverwrite)
+
         #Make link for the current running kernel sources
-        makeLink(mainKernelSourcesPath, "/usr/src/main-kernel-sources", :symbolicLinkByOverwrite)
+        makeLink(   target: mainKernelSourcesPath,
+                    path:   "/usr/src/main-kernel-sources",
+                    type:   :symbolicLinkByOverwrite)
 
         #Generate headers
-        makeSource(["mrproper"], path: mainKernelSourcesPath)
-        makeSource(["headers"], path: mainKernelSourcesPath)
+        makeSource( arguments:   "mrproper",
+                    path: mainKernelSourcesPath)
+
+        makeSource( arguments:  "headers",
+                    path: mainKernelSourcesPath)
 
         ################################################################################
         #This method is temporary before a proper one is implemented to get directories#
@@ -51,7 +59,9 @@ class Target < ISM::VirtualSoftware
                                 "xen"]
 
         headerDirectories.each do |headerDirectory|
-            makeLink("/usr/src/#{mainKernelName}/include/#{headerDirectory}", "/usr/include/#{headerDirectory}", :symbolicLinkByOverwrite)
+            makeLink(   target: "/usr/src/#{mainKernelName}/include/#{headerDirectory}",
+                        path:   "/usr/include/#{headerDirectory}",
+                        type:   :symbolicLinkByOverwrite)
         end
 
         #Experimental

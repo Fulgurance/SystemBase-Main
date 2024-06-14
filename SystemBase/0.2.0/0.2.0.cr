@@ -124,15 +124,15 @@ class Target < ISM::Software
             deleteDirectory("#{Ism.settings.rootPath}usr/share/doc")
             deleteDirectory("#{Ism.settings.rootPath}tools")
 
-            deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/lib",
+            deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/lib",
                                                 extensions: [".la"])
-            deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/libexec",
+            deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/libexec",
                                                 extensions: [".la"])
 
             if option("Multilib")
-                deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/lib32",
+                deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/lib32",
                                                     extensions: [".la"])
-                deleteAllFilesRecursivelyFinishing( path: "#{Ism.settings.rootPath}usr/libx32",
+                deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/libx32",
                                                     extensions: [".la"])
             end
         end
@@ -146,49 +146,69 @@ class Target < ISM::Software
         end
 
         if option("Pass1")
-            makeLink("usr/bin","#{Ism.settings.rootPath}bin",:symbolicLink)
-            makeLink("usr/lib","#{Ism.settings.rootPath}lib",:symbolicLink)
-            makeLink("usr/sbin","#{Ism.settings.rootPath}sbin",:symbolicLink)
+            makeLink(   target: "usr/bin",
+                        path:   "#{Ism.settings.rootPath}bin",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/lib",
+                        path:   "#{Ism.settings.rootPath}lib",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/sbin",
+                        path:   "#{Ism.settings.rootPath}sbin",
+                        type:   :symbolicLink)
 
             if option("Multilib")
-                makeLink("usr/lib32","#{Ism.settings.rootPath}lib32",:symbolicLink)
-                makeLink("usr/libx32","#{Ism.settings.rootPath}libx32",:symbolicLink)
+                makeLink(   target: "usr/lib32",
+                            path:   "#{Ism.settings.rootPath}lib32",
+                            type:   :symbolicLink)
+                makeLink(   target: "usr/libx32",
+                            path:   "#{Ism.settings.rootPath}libx32",
+                            type:   :symbolicLink)
             end
         end
 
         if option("Pass2")
             @@newDirs.each do |dir|
                 if dir == "/root"
-                    runChmodCommand(["0750","#{Ism.settings.rootPath}#{dir}"])
+                    runChmodCommand("0750 #{Ism.settings.rootPath}#{dir}")
                 end
                 if dir == "/tmp" || dir == "/var/tmp"
-                    runChmodCommand(["1777","#{Ism.settings.rootPath}#{dir}"])
+                    runChmodCommand("1777 #{Ism.settings.rootPath}#{dir}")
                 end
             end
 
             @@changeOwnerDirs.each do |dir|
-                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}#{dir}"])
-                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}#{dir}"])
+                runChownCommand("-R","root:root #{Ism.settings.rootPath}#{dir}")
+                runChownCommand("-R","root:root #{Ism.settings.rootPath}#{dir}")
             end
 
             if option("Multilib")
-                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}/lib32"])
-                runChownCommand(["-R","root:root","#{Ism.settings.rootPath}/lib32"])
+                runChownCommand("-R","root:root #{Ism.settings.rootPath}/lib32")
+                runChownCommand("-R","root:root #{Ism.settings.rootPath}/lib32")
             end
 
             @@emptyFiles.each do |file|
                 if file == "/var/log/lastlog"
-                    runChownCommand([":utmp","#{Ism.settings.rootPath}#{file}"])
-                    runChmodCommand(["0664","#{Ism.settings.rootPath}#{file}"])
+                    runChownCommand(":utmp #{Ism.settings.rootPath}#{file}")
+                    runChmodCommand("0664 #{Ism.settings.rootPath}#{file}")
                 end
                 if file == "/var/log/btmp"
-                    runChmodCommand(["0600","#{Ism.settings.rootPath}#{file}"])
+                    runChmodCommand("0600 #{Ism.settings.rootPath}#{file}")
                 end
             end
 
-            makeLink("/run","#{Ism.settings.rootPath}var/run",:symbolicLinkByOverwrite)
-            makeLink("/run/lock","#{Ism.settings.rootPath}var/lock",:symbolicLinkByOverwrite)
-            makeLink("/proc/self/mounts","#{Ism.settings.rootPath}etc/mtab",:symbolicLink)
+            makeLink(   target: "/run",
+                        path:   "#{Ism.settings.rootPath}var/run",
+                        type:   :symbolicLinkByOverwrite)
+
+            makeLink(   target: "/run/lock",
+                        path:   "#{Ism.settings.rootPath}var/lock",
+                        type:   :symbolicLinkByOverwrite)
+
+            makeLink(   target: "/proc/self/mounts",
+                        path:   "#{Ism.settings.rootPath}etc/mtab",
+                        type:   :symbolicLink)
         end
     end
 
