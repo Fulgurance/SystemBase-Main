@@ -6,6 +6,8 @@ class Target < ISM::VirtualSoftware
         ##{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}
         mainKernelSourcesPath = "/usr/src/#{mainKernelName}"
 
+        makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/")
+
         #Make link for the current kernel documentation
         makeLink(   target: "/usr/src/main-kernel-sources/Documentation",
                     path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
