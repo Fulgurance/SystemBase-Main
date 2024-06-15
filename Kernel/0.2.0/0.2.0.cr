@@ -3,18 +3,17 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
+        ##{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}
         mainKernelSourcesPath = "/usr/src/#{mainKernelName}"
-
-        makeDirectory("/usr/share/doc")
 
         #Make link for the current kernel documentation
         makeLink(   target: "/usr/src/main-kernel-sources/Documentation",
-                    path:   "/usr/share/doc/main-kernel-documentation",
+                    path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
                     type:   :symbolicLinkByOverwrite)
 
         #Make link for the current running kernel sources
         makeLink(   target: mainKernelSourcesPath,
-                    path:   "/usr/src/main-kernel-sources",
+                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources",
                     type:   :symbolicLinkByOverwrite)
 
         #Generate headers
@@ -62,7 +61,7 @@ class Target < ISM::VirtualSoftware
 
         headerDirectories.each do |headerDirectory|
             makeLink(   target: "/usr/src/#{mainKernelName}/include/#{headerDirectory}",
-                        path:   "/usr/include/#{headerDirectory}",
+                        path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
                         type:   :symbolicLinkByOverwrite)
         end
 
