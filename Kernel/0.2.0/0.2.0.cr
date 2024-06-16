@@ -20,10 +20,10 @@ class Target < ISM::VirtualSoftware
 
         #Generate headers
         makeSource( arguments:   "mrproper",
-                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
+                    path: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources")
 
         makeSource( arguments:  "headers",
-                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
+                    path: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources")
 
         ################################################################################
         #This method is temporary before a proper one is implemented to get directories#
@@ -44,7 +44,7 @@ class Target < ISM::VirtualSoftware
                                 "xen"]
 
         headerDirectories.each do |headerDirectory|
-            makeLink(   target: "../src/#{mainKernelName}/usr/include/#{headerDirectory}",
+            makeLink(   target: "../src/main-kernel-sources/usr/include/#{headerDirectory}",
                         path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
                         type:   :symbolicLinkByOverwrite)
         end
