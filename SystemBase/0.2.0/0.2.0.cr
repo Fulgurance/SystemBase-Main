@@ -119,20 +119,20 @@ class Target < ISM::Software
         end
 
         if option("Pass3")
-            deleteDirectory("#{Ism.settings.rootPath}usr/share/info")
-            deleteDirectory("#{Ism.settings.rootPath}usr/share/man")
-            deleteDirectory("#{Ism.settings.rootPath}usr/share/doc")
-            deleteDirectory("#{Ism.settings.rootPath}tools")
+            deleteDirectory("/usr/share/info")
+            deleteDirectory("/usr/share/man")
+            deleteDirectory("/usr/share/doc")
+            deleteDirectory("/tools")
 
-            deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/lib",
+            deleteAllFilesRecursivelyFinishing( path:       "/usr/lib",
                                                 extensions: [".la"])
-            deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/libexec",
+            deleteAllFilesRecursivelyFinishing( path:       "/usr/libexec",
                                                 extensions: [".la"])
 
             if option("Multilib")
-                deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/lib32",
+                deleteAllFilesRecursivelyFinishing( path:       "/usr/lib32",
                                                     extensions: [".la"])
-                deleteAllFilesRecursivelyFinishing( path:       "#{Ism.settings.rootPath}usr/libx32",
+                deleteAllFilesRecursivelyFinishing( path:       "/usr/libx32",
                                                     extensions: [".la"])
             end
         end
