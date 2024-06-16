@@ -4,26 +4,26 @@ class Target < ISM::VirtualSoftware
         super
 
         ##{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}
-        mainKernelSourcesPath = "/usr/src/#{mainKernelName}"
+        mainKernelSourcesPath = "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}"
 
         makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/")
 
         #Make link for the current kernel documentation
-        makeLink(   target: "/usr/src/main-kernel-sources/Documentation",
+        makeLink(   target: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources/Documentation",
                     path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
                     type:   :symbolicLinkByOverwrite)
 
         #Make link for the current running kernel sources
-        makeLink(   target: mainKernelSourcesPath,
+        makeLink(   target: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}",
                     path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources",
                     type:   :symbolicLinkByOverwrite)
 
         #Generate headers
         makeSource( arguments:   "mrproper",
-                    path: mainKernelSourcesPath)
+                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
 
         makeSource( arguments:  "headers",
-                    path: mainKernelSourcesPath)
+                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
 
         ################################################################################
         #This method is temporary before a proper one is implemented to get directories#
