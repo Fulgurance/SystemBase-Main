@@ -125,15 +125,15 @@ class Target < ISM::Software
             deleteDirectory("/tools")
 
             deleteAllFilesRecursivelyFinishing( path:       "/usr/lib",
-                                                extensions: [".la"])
+                                                extensions: ["la"])
             deleteAllFilesRecursivelyFinishing( path:       "/usr/libexec",
-                                                extensions: [".la"])
+                                                extensions: ["la"])
 
             if option("Multilib")
                 deleteAllFilesRecursivelyFinishing( path:       "/usr/lib32",
-                                                    extensions: [".la"])
+                                                    extensions: ["la"])
                 deleteAllFilesRecursivelyFinishing( path:       "/usr/libx32",
-                                                    extensions: [".la"])
+                                                    extensions: ["la"])
             end
         end
     end
