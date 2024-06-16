@@ -62,7 +62,7 @@ class Target < ISM::VirtualSoftware
                                 "xen"]
 
         headerDirectories.each do |headerDirectory|
-            makeLink(   target: "/usr/src/#{mainKernelName}/include/#{headerDirectory}",
+            makeLink(   target: "../src/#{mainKernelName}/include/#{headerDirectory}",
                         path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
                         type:   :symbolicLinkByOverwrite)
         end
