@@ -179,13 +179,13 @@ class Target < ISM::Software
             end
 
             @@changeOwnerDirs.each do |dir|
-                runChownCommand("-R","root:root #{Ism.settings.rootPath}#{dir}")
-                runChownCommand("-R","root:root #{Ism.settings.rootPath}#{dir}")
+                runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
+                runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
             end
 
             if option("Multilib")
-                runChownCommand("-R","root:root #{Ism.settings.rootPath}/lib32")
-                runChownCommand("-R","root:root #{Ism.settings.rootPath}/lib32")
+                runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
+                runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
             end
 
             @@emptyFiles.each do |file|
