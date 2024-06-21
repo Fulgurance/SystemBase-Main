@@ -43,10 +43,18 @@ class Target < ISM::VirtualSoftware
                                 "video",
                                 "xen"]
 
+        # headerDirectories.each do |headerDirectory|
+        #     makeLink(   target: "../src/main-kernel-sources/usr/include/#{headerDirectory}",
+        #                 path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
+        #                 type:   :symbolicLinkByOverwrite)
+        # end
+
         headerDirectories.each do |headerDirectory|
-            makeLink(   target: "../src/main-kernel-sources/usr/include/#{headerDirectory}",
-                        path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
-                        type:   :symbolicLinkByOverwrite)
+            copyDirectory(  "#{Ism.settings.rootPath}/usr/src/main-kernel-sources/usr/include/#{headerDirectory}",
+                            "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}")
+        #     makeLink(   target: "../src/main-kernel-sources/usr/include/#{headerDirectory}",
+        #                 path:   "#{Ism.settings.rootPath}/usr/include/#{headerDirectory}",
+        #                 type:   :symbolicLinkByOverwrite)
         end
 
         #Experimental
