@@ -77,9 +77,9 @@ class Target < ISM::Software
 
             lsbReleaseData = <<-CODE
             DISTRIB_ID="#{Ism.settings.systemId}"
-            DISTRIB_RELEASE=#{Ism.settings.systemRelease}"
-            DISTRIB_CODENAME=#{Ism.settings.systemCodeName}"
-            DISTRIB_DESCRIPTION=#{Ism.settings.systemDescription}"
+            DISTRIB_RELEASE="#{Ism.settings.systemRelease}"
+            DISTRIB_CODENAME="#{Ism.settings.systemCodeName}"
+            DISTRIB_DESCRIPTION="#{Ism.settings.systemDescription}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/lsb-release",lsbReleaseData)
 
