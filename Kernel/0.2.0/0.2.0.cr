@@ -3,7 +3,7 @@ class Target < ISM::VirtualSoftware
     def install
         super
 
-        ##{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}
+        recordSelectedKernel
 
         makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/")
         makeDirectory("#{Ism.settings.rootPath}/usr/include")
