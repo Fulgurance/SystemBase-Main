@@ -19,7 +19,7 @@ class Target < ISM::VirtualSoftware
                     type:   :symbolicLinkByOverwrite)
 
         #Generate headers
-        makeSource( arguments:   "mrproper",
+        makeSource( arguments:   "clean",
                     path: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources")
 
         makeSource( arguments:  "headers",
