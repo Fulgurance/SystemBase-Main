@@ -163,7 +163,7 @@ class Target < ISM::Software
                         path:   "#{Ism.settings.rootPath}/usr/lib",
                         type:   :symbolicLink)
 
-            makeLink(   target: "/usr/lib64",
+            makeLink(   target: "usr/lib64",
                         path:   "#{Ism.settings.rootPath}/lib64",
                         type:   :symbolicLink)
 
