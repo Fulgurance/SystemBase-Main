@@ -65,10 +65,11 @@ class Target < ISM::Software
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}lib64")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.sourcesPath}")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.toolsPath}")
+
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib64")
 
             if option("Multilib")
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32")
@@ -147,15 +148,20 @@ class Target < ISM::Software
 
         if option("Pass1")
             makeLink(   target: "usr/bin",
-                        path:   "#{Ism.settings.rootPath}bin",
-                        type:   :symbolicLink)
-
-            makeLink(   target: "usr/lib",
-                        path:   "#{Ism.settings.rootPath}lib",
+                        path:   "#{Ism.settings.rootPath}/bin",
                         type:   :symbolicLink)
 
             makeLink(   target: "usr/sbin",
-                        path:   "#{Ism.settings.rootPath}sbin",
+                        path:   "#{Ism.settings.rootPath}/sbin",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/lib",
+                        path:   "#{Ism.settings.rootPath}/lib",
+                        type:   :symbolicLink)
+
+            #Set the main architecture
+            makeLink(   target: "lib64",
+                        path:   "#{Ism.settings.rootPath}/usr/lib",
                         type:   :symbolicLink)
 
             if option("Multilib")
