@@ -63,7 +63,6 @@ class Target < ISM::Software
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}lib64")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.sourcesPath}")
@@ -164,12 +163,16 @@ class Target < ISM::Software
                         path:   "#{Ism.settings.rootPath}/usr/lib",
                         type:   :symbolicLink)
 
+            makeLink(   target: "/usr/lib64",
+                        path:   "#{Ism.settings.rootPath}/lib64",
+                        type:   :symbolicLink)
+
             if option("Multilib")
                 makeLink(   target: "usr/lib32",
-                            path:   "#{Ism.settings.rootPath}lib32",
+                            path:   "#{Ism.settings.rootPath}/lib32",
                             type:   :symbolicLink)
                 makeLink(   target: "usr/libx32",
-                            path:   "#{Ism.settings.rootPath}libx32",
+                            path:   "#{Ism.settings.rootPath}/libx32",
                             type:   :symbolicLink)
             end
         end
