@@ -27,7 +27,7 @@ class Target < ISM::VirtualSoftware
 
         #Generate symlinks of the current kernel headers to /usr/include
         headerPath = "#{Ism.settings.rootPath}/usr/src/main-kernel-sources/usr/include/"
-        headerDirectories = Dir.children(headerPath).select { |entry| File.directory?(entry) }
+        headerDirectories = Dir.children(headerPath).select { |entry| File.directory?("#{headerPath}/#{entry}") }
 
         headerDirectories.each do |headerDirectory|
              makeLink(   target: "../src/main-kernel-sources/usr/include/#{headerDirectory}",
