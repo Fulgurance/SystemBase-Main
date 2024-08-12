@@ -34,6 +34,7 @@ class Target < ISM::SemiVirtualSoftware
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
     def prepareInstallation
+        super
 
         if option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
@@ -157,6 +158,7 @@ class Target < ISM::SemiVirtualSoftware
     end
 
     def install
+        super
 
         if option("Pass2")
             @@newDirs.each do |dir|
