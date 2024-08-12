@@ -1,4 +1,4 @@
-class Target < ISM::Software
+class Target < ISM::SemiVirtualSoftware
 
     @@newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
                 "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
@@ -33,31 +33,7 @@ class Target < ISM::Software
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
-    def download
-    end
-
-    def check
-    end
-
-    def extract
-    end
-
-    def patch
-    end
-
-    def prepare
-    end
-
-    def configure
-    end
-
-    def build
-    end
-
     def prepareInstallation
-        if option("Pass1") || option("Pass2")
-            super
-        end
 
         if option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
@@ -100,6 +76,36 @@ class Target < ISM::Software
             VARIANT_ID="#{Ism.settings.systemVariantId}"
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/os-release",osReleaseData)
+
+            makeLink(   target: "usr/bin",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/bin",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/sbin",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/sbin",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/lib",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/lib",
+                        type:   :symbolicLink)
+
+            #Set the main architecture
+            makeLink(   target: "lib64",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib",
+                        type:   :symbolicLink)
+
+            makeLink(   target: "usr/lib64",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/lib64",
+                        type:   :symbolicLink)
+
+            if option("Multilib")
+                makeLink(   target: "usr/lib32",
+                            path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/lib32",
+                            type:   :symbolicLink)
+                makeLink(   target: "usr/libx32",
+                            path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/libx32",
+                            type:   :symbolicLink)
+            end
         end
 
         if option("Pass2")
@@ -116,6 +122,18 @@ class Target < ISM::Software
             @@emptyFiles.each do |file|
                 generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{file}")
             end
+
+            makeLink(   target: "/run",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var/run",
+                        type:   :symbolicLinkByOverwrite)
+
+            makeLink(   target: "/run/lock",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var/lock",
+                        type:   :symbolicLinkByOverwrite)
+
+            makeLink(   target: "/proc/self/mounts",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/mtab",
+                        type:   :symbolicLink)
         end
 
         if option("Pass3")
@@ -139,43 +157,6 @@ class Target < ISM::Software
     end
 
     def install
-        if option("Pass1") || option("Pass2")
-            super
-        else
-            Ism.addInstalledSoftware(@information)
-        end
-
-        if option("Pass1")
-            makeLink(   target: "usr/bin",
-                        path:   "#{Ism.settings.rootPath}/bin",
-                        type:   :symbolicLink)
-
-            makeLink(   target: "usr/sbin",
-                        path:   "#{Ism.settings.rootPath}/sbin",
-                        type:   :symbolicLink)
-
-            makeLink(   target: "usr/lib",
-                        path:   "#{Ism.settings.rootPath}/lib",
-                        type:   :symbolicLink)
-
-            #Set the main architecture
-            makeLink(   target: "lib64",
-                        path:   "#{Ism.settings.rootPath}/usr/lib",
-                        type:   :symbolicLink)
-
-            makeLink(   target: "usr/lib64",
-                        path:   "#{Ism.settings.rootPath}/lib64",
-                        type:   :symbolicLink)
-
-            if option("Multilib")
-                makeLink(   target: "usr/lib32",
-                            path:   "#{Ism.settings.rootPath}/lib32",
-                            type:   :symbolicLink)
-                makeLink(   target: "usr/libx32",
-                            path:   "#{Ism.settings.rootPath}/libx32",
-                            type:   :symbolicLink)
-            end
-        end
 
         if option("Pass2")
             @@newDirs.each do |dir|
@@ -206,22 +187,8 @@ class Target < ISM::Software
                     runChmodCommand("0600 #{Ism.settings.rootPath}#{file}")
                 end
             end
-
-            makeLink(   target: "/run",
-                        path:   "#{Ism.settings.rootPath}var/run",
-                        type:   :symbolicLinkByOverwrite)
-
-            makeLink(   target: "/run/lock",
-                        path:   "#{Ism.settings.rootPath}var/lock",
-                        type:   :symbolicLinkByOverwrite)
-
-            makeLink(   target: "/proc/self/mounts",
-                        path:   "#{Ism.settings.rootPath}etc/mtab",
-                        type:   :symbolicLink)
         end
-    end
 
-    def clean
     end
 
 end
