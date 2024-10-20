@@ -20,10 +20,10 @@ class Target < ISM::VirtualSoftware
 
         #Generate headers
         makeSource( arguments:   "clean",
-                    path: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources")
+                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
 
         makeSource( arguments:  "headers",
-                    path: "#{Ism.settings.rootPath}/usr/src/main-kernel-sources")
+                    path: "#{Ism.settings.rootPath}/usr/src/#{mainKernelName}")
 
         #Generate symlinks of the current kernel headers to /usr/include
         headerPath = "#{Ism.settings.rootPath}/usr/src/main-kernel-sources/usr/include/"
