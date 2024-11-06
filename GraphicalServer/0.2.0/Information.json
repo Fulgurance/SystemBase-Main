@@ -24,6 +24,20 @@
       "kernelDependencies": []
     },
     {
+      "name": "Xwayland",
+      "description": "Enable xwayland support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "XorgBase-Main",
+          "name": "Xwayland",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Wayland",
       "description": "Enable wayland support",
       "active": false,
