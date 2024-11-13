@@ -6,7 +6,14 @@
   "description": "Virtual installer to set the default language",
   "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/Language",
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "port": "SystemLanguages-Main",
+      "name": "Default",
+      "version": ">=0.0.0",
+      "options": []
+    }
+  ],
   "kernelDependencies": [],
   "options": [
     {
