@@ -12,7 +12,7 @@
     {
       "name": "Sysklogd",
       "description": "Enable sysklogd support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "port": "Utilities-Main",
