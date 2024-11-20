@@ -191,6 +191,10 @@ class Target < ISM::SemiVirtualSoftware
             end
         end
 
+        if !passEnabled
+            recordCrossToolchainAsFullyBuilt
+        end
+
     end
 
 end
