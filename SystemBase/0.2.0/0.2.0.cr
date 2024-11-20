@@ -1,8 +1,8 @@
 class Target < ISM::SemiVirtualSoftware
 
     @@newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
-                "/etc/sysconfig","/lib/firmware","/media/floppy","/media/cdrom","/usr/share/color",
-                "/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
+                "/etc/sysconfig","/lib/firmware","/lib/locale","/media/floppy","/media/cdrom",
+                "/usr/share/color","/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
                 "/usr/share/man","/usr/share/man1","/usr/share/man2","/usr/share/man3",
                 "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
                 "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
