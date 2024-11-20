@@ -142,18 +142,6 @@ class Target < ISM::SemiVirtualSoftware
             deleteDirectory("/usr/share/man")
             deleteDirectory("/usr/share/doc")
             deleteDirectory("/tools")
-
-            deleteAllFilesRecursivelyFinishing( path:       "/usr/lib",
-                                                extensions: ["la"])
-            deleteAllFilesRecursivelyFinishing( path:       "/usr/libexec",
-                                                extensions: ["la"])
-
-            if option("Multilib")
-                deleteAllFilesRecursivelyFinishing( path:       "/usr/lib32",
-                                                    extensions: ["la"])
-                deleteAllFilesRecursivelyFinishing( path:       "/usr/libx32",
-                                                    extensions: ["la"])
-            end
         end
     end
 
