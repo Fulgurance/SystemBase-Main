@@ -1,10 +1,10 @@
 {
   "port": "SystemBase-Main",
-  "name": "SystemBase-Config",
+  "name": "SystemConfiguration",
   "version": "0.2.0",
   "architectures": ["x86_64"],
-  "description": "Installer to prepare the system base configuration",
-  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase-Config",
+  "description": "Installer to prepare the system configuration",
+  "website": "https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemConfiguration",
   "installedFiles": [],
   "dependencies": [
     {
