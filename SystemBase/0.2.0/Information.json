@@ -176,6 +176,18 @@
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
+      "name": "Libelf",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Bc",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
       "port": "SystemGroups-Main",
       "name": "Root",
       "version": ">=0.1.0",
