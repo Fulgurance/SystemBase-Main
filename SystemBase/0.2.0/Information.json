@@ -158,6 +158,12 @@
       "options": []
     },
     {
+      "port": "Utilities-Main",
+      "name": "Kbd",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
       "port": "ProgrammingTools-Main",
       "name": "Meson",
       "version": ">=0.0.0",
