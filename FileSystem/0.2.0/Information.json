@@ -92,6 +92,20 @@
         }
       ],
       "kernelDependencies": []
+    },
+    {
+      "name": "Squashfs-Tools",
+      "description": "Enable squashfs support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "FileSystems-Main",
+          "name": "Squashfs-Tools",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
     }
   ],
   "uniqueDependencies": [],
