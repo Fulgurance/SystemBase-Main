@@ -8,14 +8,19 @@ class Target < ISM::VirtualSoftware
         makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/")
         makeDirectory("#{Ism.settings.rootPath}/usr/include")
 
-        #Make link for the current kernel documentation
-        makeLink(   target: "../../src/main-kernel-sources/Documentation",
-                    path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
-                    type:   :symbolicLinkByOverwrite)
-
         #Make link for the current running kernel sources
         makeLink(   target: "#{mainKernelName}",
                     path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources",
+                    type:   :symbolicLinkByOverwrite)
+
+        #Make link for the current kernel documentation
+        makeLink(   target: "main-kernel-sources/Documentation",
+                    path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
+                    type:   :symbolicLinkByOverwrite)
+
+        #Make link for the current running kernel source headers
+        makeLink(   target: "main-kernel-sources/Documentation/usr/include",
+                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources-headers",
                     type:   :symbolicLinkByOverwrite)
 
         #Generate headers
