@@ -13,14 +13,14 @@ class Target < ISM::VirtualSoftware
                     path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources",
                     type:   :symbolicLinkByOverwrite)
 
+        #Make link for the current running kernel source headers
+        makeLink(   target: "#{mainKernelHeadersName}",
+                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources-headers",
+                    type:   :symbolicLinkByOverwrite)
+
         #Make link for the current kernel documentation
         makeLink(   target: "main-kernel-sources/Documentation",
                     path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
-                    type:   :symbolicLinkByOverwrite)
-
-        #Make link for the current running kernel source headers
-        makeLink(   target: "main-kernel-sources/Documentation/usr/include",
-                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources-headers",
                     type:   :symbolicLinkByOverwrite)
 
         #Generate headers
