@@ -4,24 +4,10 @@ class Target < ISM::VirtualSoftware
         super
 
         recordSelectedKernel
+        updateKernelSymlinks
 
         makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/")
         makeDirectory("#{Ism.settings.rootPath}/usr/include")
-
-        #Make link for the current running kernel sources
-        makeLink(   target: "#{mainKernelName}",
-                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources",
-                    type:   :symbolicLinkByOverwrite)
-
-        #Make link for the current running kernel source headers
-        makeLink(   target: "#{mainKernelHeadersName}",
-                    path:   "#{Ism.settings.rootPath}/usr/src/main-kernel-sources-headers",
-                    type:   :symbolicLinkByOverwrite)
-
-        #Make link for the current kernel documentation
-        makeLink(   target: "main-kernel-sources/Documentation",
-                    path:   "#{Ism.settings.rootPath}/usr/share/doc/main-kernel-documentation",
-                    type:   :symbolicLinkByOverwrite)
 
         #Generate headers
         makeSource( arguments:   "clean",
