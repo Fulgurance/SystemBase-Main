@@ -180,6 +180,13 @@ class Target < ISM::SemiVirtualSoftware
                 end
             end
 
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}/etc/ism")
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}/var/ism")
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}/tmp/ism")
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}/etc/ism")
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}#{ISM::Default::Path::SourcesDirectory}")
+            runChownCommand("-R ism:ism #{Ism.settings.rootPath}#{ISM::Default::Path::ToolsDirectory}")
+
             prepareChrootFileSystem
             enableInstallationByChroot
         end
