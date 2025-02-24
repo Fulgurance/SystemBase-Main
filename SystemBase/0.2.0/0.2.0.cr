@@ -177,6 +177,8 @@ class Target < ISM::SemiVirtualSoftware
                     runChmodCommand("0600 #{Ism.settings.rootPath}#{file}")
                 end
             end
+
+            recordSystemHandleUserAccess
         end
 
         if !passEnabled
