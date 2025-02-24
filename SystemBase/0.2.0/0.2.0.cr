@@ -179,6 +179,8 @@ class Target < ISM::SemiVirtualSoftware
             end
 
             recordSystemHandleUserAccess
+            mountChrootKernelFileSystem
+            enableInstallationByChroot
         end
 
         if !passEnabled
