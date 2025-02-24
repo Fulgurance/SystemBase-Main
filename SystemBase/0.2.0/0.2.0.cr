@@ -135,6 +135,8 @@ class Target < ISM::SemiVirtualSoftware
             makeLink(   target: "/proc/self/mounts",
                         path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/mtab",
                         type:   :symbolicLink)
+
+            recordSystemHandleUserAccess
         end
 
         if option("Pass3")
@@ -178,7 +180,6 @@ class Target < ISM::SemiVirtualSoftware
                 end
             end
 
-            recordSystemHandleUserAccess
             prepareChrootFileSystem
             enableInstallationByChroot
         end
