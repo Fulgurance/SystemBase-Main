@@ -183,7 +183,6 @@ class Target < ISM::SemiVirtualSoftware
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/etc/ism")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/var/ism")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/tmp/ism")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/etc/ism")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::SourcesDirectory}")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::ToolsDirectory}")
 
