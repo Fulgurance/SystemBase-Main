@@ -167,7 +167,7 @@ class Target < ISM::SemiVirtualSoftware
 
             if option("Multilib")
                 runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
-                runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
+                runChownCommand("-R root:root #{Ism.settings.rootPath}/libx32")
             end
 
             @@emptyFiles.each do |file|
