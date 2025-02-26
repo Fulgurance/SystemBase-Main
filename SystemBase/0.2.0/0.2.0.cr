@@ -2,8 +2,8 @@ class Target < ISM::SemiVirtualSoftware
 
     @@newDirs = ["/dev","/proc","/sys","/run","/boot","/home","/mnt","/opt","/srv","/etc/opt",
                 "/etc/sysconfig","/lib/firmware","/lib/locale","/media/floppy","/media/cdrom",
-                "/usr/share/color","/usr/share/dict","/usr/share/doc","/usr/share/info","/usr/share/locale",
-                "/usr/share/man","/usr/share/man1","/usr/share/man2","/usr/share/man3",
+                "/usr/share/color","/usr/share/dict","/usr/share/locale",
+                "/usr/share/man1","/usr/share/man2","/usr/share/man3",
                 "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
                 "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
                 "/usr/local/share/color","/usr/local/share/dict","/usr/local/share/doc",
@@ -13,23 +13,9 @@ class Target < ISM::SemiVirtualSoftware
                 "/usr/local/share/man7","/usr/local/share/man8","/usr/local/share/misc",
                 "/usr/local/share/terminfo","/usr/local/share/zoneinfo","/var/cache","/var/local",
                 "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
-                "/var/lib/locate","/root","/tmp","/var/tmp","/dev","/proc","/sys","/run","/boot",
-                "/home","/mnt","/opt","/srv","/etc/opt","/etc/sysconfig","/lib/firmware",
-                "/media/floppy","/media/cdrom","/usr/share/color","/usr/share/dict","/usr/share/doc",
-                "/usr/share/info","/usr/share/locale","/usr/share/man","/usr/share/man1",
-                "/usr/share/man2","/usr/share/man3","/usr/share/man4","/usr/share/man5",
-                "/usr/share/man6","/usr/share/man7","/usr/share/man8","/usr/share/misc",
-                "/usr/share/terminfo","/usr/share/zoneinfo","/usr/local/share/color",
-                "/usr/local/share/dict","/usr/local/share/doc","/usr/local/share/info",
-                "/usr/local/share/locale","/usr/local/share/man","/usr/local/share/man1",
-                "/usr/local/share/man2","/usr/local/share/man3","/usr/local/share/man4",
-                "/usr/local/share/man5","/usr/local/share/man6","/usr/local/share/man7",
-                "/usr/local/share/man8","/usr/local/share/misc","/usr/local/share/terminfo",
-                "/usr/local/share/zoneinfo","/var/cache","/var/local","/var/log","/var/mail",
-                "/var/opt","/var/spool","/var/lib/color","/var/lib/misc","/var/lib/locate","/root",
-                "/tmp","/var/tmp"]
+                "/var/lib/locate","/root","/tmp","/var/tmp"]
 
-    @@changeOwnerDirs = [ "/usr","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","#{ISM::Default::Path::ToolsDirectory}","#{ISM::Default::Path::SourcesDirectory}","/.","/.."]
+    @@changeOwnerDirs = [ "/usr","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","#{ISM::Default::Path::SourcesDirectory}","/.","/.."]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
@@ -162,8 +148,11 @@ class Target < ISM::SemiVirtualSoftware
 
             @@changeOwnerDirs.each do |dir|
                 runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
-                runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
             end
+
+            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/info")
+            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/man")
+            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/doc")
 
             if option("Multilib")
                 runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
