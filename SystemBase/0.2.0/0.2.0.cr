@@ -15,7 +15,7 @@ class Target < ISM::SemiVirtualSoftware
                 "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
                 "/var/lib/locate","/root","/tmp","/var/tmp"]
 
-    @@changeOwnerDirs = [ "/usr","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","#{ISM::Default::Path::SourcesDirectory}","/.","/.."]
+    @@changeOwnerDirs = [ "/usr","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","/#{ISM::Default::Path::SourcesDirectory}","/#{ISM::Default::Path::ToolsDirectory}","/.","/.."]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
@@ -125,12 +125,6 @@ class Target < ISM::SemiVirtualSoftware
             recordSystemHandleUserAccess
         end
 
-        if option("Pass3")
-            deleteDirectory("/usr/share/info")
-            deleteDirectory("/usr/share/man")
-            deleteDirectory("/usr/share/doc")
-            deleteDirectory("/tools")
-        end
     end
 
     def install
@@ -149,10 +143,6 @@ class Target < ISM::SemiVirtualSoftware
             @@changeOwnerDirs.each do |dir|
                 runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
             end
-
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/info")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/man")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/usr/share/doc")
 
             if option("Multilib")
                 runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
@@ -183,6 +173,17 @@ class Target < ISM::SemiVirtualSoftware
             recordCrossToolchainAsFullyBuilt
         end
 
+    end
+
+    def clean
+        super
+
+        if option("Pass3")
+            uninstallDirectory("/usr/share/info")
+            uninstallDirectory("/usr/share/man")
+            uninstallDirectory("/usr/share/doc")
+            uninstallDirectory("/tools")
+        end
     end
 
 end
