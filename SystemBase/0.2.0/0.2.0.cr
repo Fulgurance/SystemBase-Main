@@ -15,7 +15,7 @@ class Target < ISM::SemiVirtualSoftware
                 "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
                 "/var/lib/locate","/root","/tmp","/var/tmp"]
 
-    @@changeOwnerDirs = [ "/usr","/lib64","/var","/etc","/bin","/sbin","/tmp","/boot","/#{ISM::Default::Path::SourcesDirectory}","/#{ISM::Default::Path::ToolsDirectory}","/.","/.."]
+    @@changeOwnerDirs = ["/#{ISM::Default::Path::SourcesDirectory}","/#{ISM::Default::Path::ToolsDirectory}"]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
@@ -131,37 +131,10 @@ class Target < ISM::SemiVirtualSoftware
         super
 
         if option("Pass2")
-            @@newDirs.each do |dir|
-                if dir == "/root"
-                    runChmodCommand("0750 #{Ism.settings.rootPath}#{dir}")
-                end
-                if dir == "/tmp" || dir == "/var/tmp"
-                    runChmodCommand("1777 #{Ism.settings.rootPath}#{dir}")
-                end
-            end
-
             @@changeOwnerDirs.each do |dir|
                 runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
             end
 
-            if option("Multilib")
-                runChownCommand("-R root:root #{Ism.settings.rootPath}/lib32")
-                runChownCommand("-R root:root #{Ism.settings.rootPath}/libx32")
-            end
-
-            @@emptyFiles.each do |file|
-                if file == "/var/log/lastlog"
-                    runChownCommand(":utmp #{Ism.settings.rootPath}#{file}")
-                    runChmodCommand("0664 #{Ism.settings.rootPath}#{file}")
-                end
-                if file == "/var/log/btmp"
-                    runChmodCommand("0600 #{Ism.settings.rootPath}#{file}")
-                end
-            end
-
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/etc/ism")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/var/ism")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}/tmp/ism")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::SourcesDirectory}")
             runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::ToolsDirectory}")
 
