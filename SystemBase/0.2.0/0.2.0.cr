@@ -15,8 +15,6 @@ class Target < ISM::SemiVirtualSoftware
                 "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
                 "/var/lib/locate","/root","/tmp","/var/tmp"]
 
-    @@changeOwnerDirs = ["/#{ISM::Default::Path::SourcesDirectory}","/#{ISM::Default::Path::ToolsDirectory}"]
-
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
     def prepareInstallation
@@ -131,13 +129,6 @@ class Target < ISM::SemiVirtualSoftware
         super
 
         if option("Pass2")
-            @@changeOwnerDirs.each do |dir|
-                runChownCommand("-R root:root #{Ism.settings.rootPath}#{dir}")
-            end
-
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::SourcesDirectory}")
-            runChownCommand("-R #{systemId}:#{systemId} #{Ism.settings.rootPath}#{ISM::Default::Path::ToolsDirectory}")
-
             prepareChrootFileSystem
             enableInstallationByChroot
         end

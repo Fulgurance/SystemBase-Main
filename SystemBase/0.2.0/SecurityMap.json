@@ -55,6 +55,18 @@
       "mode":   "0600"
     },
     {
+      "target": "/sources",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/tools",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
       "target": "/etc/ism",
       "user":   "ism",
       "group":  "ism",
