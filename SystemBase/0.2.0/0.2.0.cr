@@ -143,10 +143,10 @@ class Target < ISM::SemiVirtualSoftware
         super
 
         if option("Pass3")
-            uninstallDirectory("/usr/share/info")
-            uninstallDirectory("/usr/share/man")
-            uninstallDirectory("/usr/share/doc")
-            uninstallDirectory("/tools")
+            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/info")
+            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/man")
+            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/doc")
+            uninstallDirectory("#{Ism.settings.rootPath}/tools")
         end
     end
 
