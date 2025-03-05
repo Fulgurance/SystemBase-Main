@@ -125,7 +125,7 @@ class Target < ISM::SemiVirtualSoftware
 
     end
 
-    def install
+    def deploy
         super
 
         if option("Pass2")
