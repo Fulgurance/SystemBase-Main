@@ -121,12 +121,6 @@
       "mode":   "0755"
     },
     {
-      "target": "/tmp",
-      "user":   "root",
-      "group":  "root",
-      "mode":   "0755"
-    },
-    {
       "target": "/boot",
       "user":   "root",
       "group":  "root",
