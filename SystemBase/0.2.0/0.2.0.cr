@@ -6,14 +6,8 @@ class Target < ISM::SemiVirtualSoftware
                 "/usr/share/man1","/usr/share/man2","/usr/share/man3",
                 "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
                 "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
-                "/usr/local/share/color","/usr/local/share/dict","/usr/local/share/doc",
-                "/usr/local/share/info","/usr/local/share/locale","/usr/local/share/man",
-                "/usr/local/share/man1","/usr/local/share/man2","/usr/local/share/man3",
-                "/usr/local/share/man4","/usr/local/share/man5","/usr/local/share/man6",
-                "/usr/local/share/man7","/usr/local/share/man8","/usr/local/share/misc",
-                "/usr/local/share/terminfo","/usr/local/share/zoneinfo","/var/cache","/var/local",
-                "/var/log","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/lib/misc",
-                "/var/lib/locate","/root","/tmp","/var/tmp"]
+                "/var/cache","/var/mail","/var/opt","/var/spool","/var/lib/color",
+                "/var/lib/misc","/var/lib/locate","/root","/tmp","/var/tmp"]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 
@@ -22,8 +16,7 @@ class Target < ISM::SemiVirtualSoftware
 
         if option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}var/log/ism")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.sourcesPath}")
