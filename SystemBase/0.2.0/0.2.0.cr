@@ -7,7 +7,7 @@ class Target < ISM::SemiVirtualSoftware
                 "/usr/share/man4","/usr/share/man5","/usr/share/man6","/usr/share/man7",
                 "/usr/share/man8","/usr/share/misc","/usr/share/terminfo","/usr/share/zoneinfo",
                 "/var/cache","/var/mail","/var/opt","/var/spool","/var/lib/color","/var/log",
-                "/var/lib/misc","/var/lib/locate","/root","/tmp","/var/tmp"]
+                "/var/lib/misc","/var/lib/locate","/root","/tmp","/var/tmp","/dev/shm"]
 
     @@emptyFiles = ["/var/log/btmp","/var/log/lastlog","/var/log/faillog","/var/log/wtmp"]
 

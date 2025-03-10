@@ -125,6 +125,12 @@
       "user":   "root",
       "group":  "root",
       "mode":   "0755"
+    },
+    {
+      "target": "/dev/shm",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "1777"
     }
   ]
 }
