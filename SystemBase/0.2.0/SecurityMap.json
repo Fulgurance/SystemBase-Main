@@ -9,5 +9,132 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "Sources",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "Tools",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/root",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0750"
+    },
+    {
+      "target": "/tmp",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "1777"
+    },
+    {
+      "target": "/var/tmp",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "1777"
+    },
+    {
+      "target": "/lib32",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/libx32",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/lib64",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/var/log/lastlog",
+      "user":   "root",
+      "group":  "utmp",
+      "mode":   "0664"
+    },
+    {
+      "target": "/var/log/btmp",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0600"
+    },
+    {
+      "target": "/etc/ism",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/var/ism",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/tmp/ism",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/var/log/ism",
+      "user":   "ism",
+      "group":  "ism",
+      "mode":   "0755"
+    },
+    {
+      "target": "/usr",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/var",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/etc",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/bin",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/sbin",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/boot",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    },
+    {
+      "target": "/dev/shm",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "1777"
+    }
+  ]
 }
