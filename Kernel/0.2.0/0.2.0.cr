@@ -1,4 +1,4 @@
-class Target < ISM::VirtualSoftware
+class Target < ISM::ComponentSoftware
 
     def install
         super

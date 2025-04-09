@@ -1,2 +1,2 @@
-class Target < ISM::VirtualSoftware
+class Target < ISM::ComponentSoftware
 end
