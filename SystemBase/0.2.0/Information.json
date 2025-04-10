@@ -8,12 +8,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemLanguages-Main",
-      "name": "Default",
-      "version": ">=0.0.0",
-      "options": []
-    },
-    {
       "port": "ProgrammingTools-Main",
       "name": "Binutils",
       "version": ">=0.0.0",
