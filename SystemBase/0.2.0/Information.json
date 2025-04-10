@@ -489,13 +489,13 @@
           "port": "SystemGroups-Main",
           "name": "Audio",
           "version": ">=0.1.0",
-          "options": ["Pass1"]
+          "options": []
         },
         {
           "port": "SystemGroups-Main",
           "name": "Video",
           "version": ">=0.1.0",
-          "options": ["Pass1"]
+          "options": []
         },
         {
           "port": "SystemGroups-Main",
