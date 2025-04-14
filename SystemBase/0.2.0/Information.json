@@ -609,6 +609,12 @@
           "name": "Ism",
           "version": ">=0.1.0",
           "options": []
+        },
+        {
+          "port": "SystemBase-Main",
+          "name": "ChrootBase",
+          "version": ">=0.2.0",
+          "options": []
         }
       ],
       "kernelDependencies": []
