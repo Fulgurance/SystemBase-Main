@@ -405,7 +405,14 @@
       "name": "Pass1",
       "description": "Enable the phase 1 building of the system base",
       "active": false,
-      "dependencies": [],
+      "dependencies": [
+        {
+          "port": "Components-Main",
+          "name": "Architecture",
+          "version": ">=0.2.0",
+          "options": []
+        }
+      ],
       "kernelDependencies": []
     },
     {
