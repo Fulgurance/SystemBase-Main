@@ -22,7 +22,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Bootloader",
           "version": ">=0.0.0",
           "options": []
@@ -36,7 +36,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Kernel",
           "version": ">=0.0.0",
           "options": []
@@ -50,7 +50,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Init",
           "version": ">=0.0.0",
           "options": []
@@ -64,7 +64,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "FileSystem",
           "version": ">=0.0.0",
           "options": []
@@ -78,7 +78,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Language",
           "version": ">=0.0.0",
           "options": []
@@ -92,7 +92,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Timezone",
           "version": ">=0.0.0",
           "options": []
@@ -106,7 +106,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Shell",
           "version": ">=0.0.0",
           "options": []
@@ -120,7 +120,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Logger",
           "version": ">=0.0.0",
           "options": []
@@ -134,7 +134,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "Cron",
           "version": ">=0.0.0",
           "options": []
@@ -148,7 +148,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "WindowManager",
           "version": ">=0.0.0",
           "options": []
@@ -162,7 +162,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "DisplayManager",
           "version": ">=0.0.0",
           "options": []
@@ -176,7 +176,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "GraphicalServer",
           "version": ">=0.0.0",
           "options": []
@@ -190,7 +190,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "SystemBase-Main",
+          "port": "Components-Main",
           "name": "DesktopEnvironment",
           "version": ">=0.0.0",
           "options": []
