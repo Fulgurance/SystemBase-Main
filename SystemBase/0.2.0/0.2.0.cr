@@ -84,9 +84,7 @@ class Target < ISM::SemiVirtualSoftware
                             path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/libx32",
                             type:   :symbolicLink)
             end
-        end
 
-        if option("Pass2")
             @@newDirs.each do |dir|
                 makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}#{dir}")
             end
@@ -112,7 +110,9 @@ class Target < ISM::SemiVirtualSoftware
             makeLink(   target: "/proc/self/mounts",
                         path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/mtab",
                         type:   :symbolicLink)
+        end
 
+        if option("Pass2")
             recordSystemHandleUserAccess
         end
 
