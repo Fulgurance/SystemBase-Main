@@ -135,11 +135,10 @@ class Target < ISM::SemiVirtualSoftware
     def clean
         super
 
-        if option("Pass3")
-            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/info")
-            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/man")
-            uninstallDirectory("#{Ism.settings.rootPath}/usr/share/doc")
-            uninstallDirectory("#{Ism.settings.rootPath}/tools")
+        if !passEnabled
+            if Dir.exists?("#{Ism.settings.rootPath}/tools")
+                uninstallDirectory("#{Ism.settings.rootPath}/tools")
+            end
         end
     end
 
