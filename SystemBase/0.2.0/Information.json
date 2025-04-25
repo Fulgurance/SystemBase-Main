@@ -8,6 +8,12 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Utilities-Main",
+      "name": "Util-Linux",
+      "version": ">=0.0.0",
+      "options": ["Pass1"]
+    },
+    {
       "port": "SystemGroups-Main",
       "name": "Root",
       "version": ">=0.1.0",
