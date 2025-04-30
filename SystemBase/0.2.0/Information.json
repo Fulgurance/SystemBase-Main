@@ -8,10 +8,190 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
+      "name": "Binutils",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Gcc",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Glibc",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "M4",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Ncurses",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Shells-Main",
+      "name": "Bash",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Coreutils",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Diffutils",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "File",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Findutils",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Gawk",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Grep",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Gzip",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Make",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Patch",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Sed",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Tar",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Xz",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Gettext",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Bison",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Perl",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Texinfo",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
       "port": "Utilities-Main",
       "name": "Util-Linux",
       "version": ">=0.0.0",
-      "options": ["Pass1"]
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Kbd",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Meson",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "SecuritySoftwares-Main",
+      "name": "Shadow",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Pkgconf",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libelf",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Bc",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Cpio",
+      "version": ">=0.0.0",
+      "options": []
     },
     {
       "port": "SystemGroups-Main",
