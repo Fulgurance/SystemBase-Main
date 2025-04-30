@@ -17,6 +17,20 @@
   "kernelDependencies": [],
   "options": [
     {
+      "name": "Architecture",
+      "description": "Enable architecture support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "Components-Main",
+          "name": "Architecture",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
       "name": "Bootloader",
       "description": "Enable bootloader support",
       "active": true,
@@ -192,6 +206,20 @@
         {
           "port": "Components-Main",
           "name": "DesktopEnvironment",
+          "version": ">=0.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Library",
+      "description": "Enable library support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "Components-Main",
+          "name": "Library",
           "version": ">=0.0.0",
           "options": []
         }
