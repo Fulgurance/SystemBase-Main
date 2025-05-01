@@ -231,12 +231,6 @@
           "name": "Architecture",
           "version": ">=0.2.0",
           "options": []
-        },
-        {
-          "port": "Components-Main",
-          "name": "Library",
-          "version": ">=0.2.0",
-          "options": []
         }
       ],
       "kernelDependencies": []
