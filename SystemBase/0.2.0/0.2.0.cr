@@ -112,19 +112,19 @@ class Target < ISM::SemiVirtualSoftware
                         type:   :symbolicLink)
         end
 
-        if option("Pass2")
-            recordSystemHandleUserAccess
-        end
+        # if option("Pass2")
+        #     recordSystemHandleUserAccess
+        # end
 
     end
 
     def deploy
         super
 
-        if option("Pass2")
-            prepareChrootFileSystem
-            enableInstallationByChroot
-        end
+        # if option("Pass2")
+        #     prepareChrootFileSystem
+        #     enableInstallationByChroot
+        # end
 
         if !passEnabled
             recordCrossToolchainAsFullyBuilt
@@ -132,14 +132,14 @@ class Target < ISM::SemiVirtualSoftware
 
     end
 
-    def clean
-        super
-
-        if !passEnabled
-            if Dir.exists?("#{Ism.settings.rootPath}/tools")
-                uninstallDirectory("#{Ism.settings.rootPath}/tools")
-            end
-        end
-    end
+    # def clean
+    #     super
+    #
+    #     if !passEnabled
+    #         if Dir.exists?("#{Ism.settings.rootPath}/tools")
+    #             uninstallDirectory("#{Ism.settings.rootPath}/tools")
+    #         end
+    #     end
+    # end
 
 end
