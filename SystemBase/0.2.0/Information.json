@@ -50,7 +50,7 @@
       "options": []
     },
     {
-      "port": "Utilities-Main",
+      "port": "ProgrammingTools-Main",
       "name": "Diffutils",
       "version": ">=0.0.0",
       "options": []
