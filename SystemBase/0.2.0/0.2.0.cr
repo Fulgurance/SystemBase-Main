@@ -123,7 +123,6 @@ class Target < ISM::SemiVirtualSoftware
 
         if option("Pass2")
             prepareChrootFileSystem
-            enableInstallationByChroot
         end
 
         if !passEnabled
