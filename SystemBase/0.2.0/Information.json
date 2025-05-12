@@ -8,6 +8,12 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SecuritySoftwares-Main",
+      "name": "Shadow",
+      "version": ">=0.0.0",
+      "options": []
+    },
+    {
       "port": "ProgrammingTools-Main",
       "name": "Binutils",
       "version": ">=0.0.0",
