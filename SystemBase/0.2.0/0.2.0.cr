@@ -112,10 +112,6 @@ class Target < ISM::SemiVirtualSoftware
                         type:   :symbolicLink)
         end
 
-        if option("Pass2")
-            recordSystemHandleUserAccess
-        end
-
     end
 
     def deploy
