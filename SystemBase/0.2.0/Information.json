@@ -191,6 +191,20 @@
           "name": "ChrootBase",
           "version": ">=0.2.0",
           "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Pass3",
+      "description": "Enable the phase 3 building of the system base",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Util-Linux",
+          "version": ">=0.0.0",
+          "options": ["Pass1"]
         },
         {
           "port": "SystemGroups-Main",
@@ -389,20 +403,6 @@
           "name": "Ism",
           "version": ">=0.1.0",
           "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Pass3",
-      "description": "Enable the phase 3 building of the system base",
-      "active": false,
-      "dependencies": [
-        {
-          "port": "Utilities-Main",
-          "name": "Util-Linux",
-          "version": ">=0.0.0",
-          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []
