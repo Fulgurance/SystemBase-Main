@@ -130,7 +130,7 @@ class Target < ISM::SemiVirtualSoftware
     def clean
         super
 
-        if !passEnabled
+        if option("Pass2")
             if Dir.exists?("#{Ism.settings.rootPath}/tools")
                 uninstallDirectory("#{Ism.settings.rootPath}/tools")
             end
