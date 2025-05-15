@@ -117,10 +117,6 @@ class Target < ISM::SemiVirtualSoftware
     def deploy
         super
 
-        if option("Pass2")
-            prepareChrootFileSystem
-        end
-
         if !passEnabled
             recordCrossToolchainAsFullyBuilt
         end
