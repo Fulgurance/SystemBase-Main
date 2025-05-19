@@ -1,5 +1,9 @@
 class Target < ISM::VirtualSoftware
 
+    def deploy
+        recordHandleChroot
+    end
+
     def showInformations
         super
 
