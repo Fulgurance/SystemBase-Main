@@ -116,21 +116,14 @@ class Target < ISM::SemiVirtualSoftware
 
     def deploy
         super
+        if option("Pass2")
+            prepareChrootFileSystem
+        end
 
         if !passEnabled
             recordCrossToolchainAsFullyBuilt
         end
 
-    end
-
-    def clean
-        super
-
-        if option("Pass2")
-            if Dir.exists?("#{Ism.settings.rootPath}/tools")
-                uninstallDirectory("#{Ism.settings.rootPath}/tools")
-            end
-        end
     end
 
 end
