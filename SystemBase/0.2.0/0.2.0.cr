@@ -126,8 +126,8 @@ class Target < ISM::SemiVirtualSoftware
 
             [   "/sources",
                 "/tools",
-                "/etc/ism",
                 "/var/ism",
+                "/var/lib/ism",
                 "/tmp/ism",
                 "/var/log/ism"].each do |file|
                 runChownCommand("-R ism:ism #{file}")
