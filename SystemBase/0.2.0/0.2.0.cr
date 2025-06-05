@@ -126,7 +126,7 @@ class Target < ISM::SemiVirtualSoftware
 
             [   "/sources",
                 "/tools",
-                "/var/ism",
+                #"/var/ism",
                 "/var/lib/ism",
                 "/tmp/ism",
                 "/var/log/ism"].each do |file|
