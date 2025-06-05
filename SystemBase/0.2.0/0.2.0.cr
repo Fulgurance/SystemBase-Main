@@ -116,12 +116,52 @@ class Target < ISM::SemiVirtualSoftware
 
     def deploy
         super
+
         if option("Pass2")
             prepareChrootFileSystem
         end
 
         if !passEnabled
             recordCrossToolchainAsFullyBuilt
+
+            [   Ism.settings.sourcesPath,
+                Ism.settings.rootPath,
+                "/etc/ism",
+                "/var/ism",
+                "/tmp/ism",
+                "/var/log/ism"].each do |file|
+                runChownCommand("-R ism:ism #{file}")
+                runChmodCommand("-R 0755 #{file}")
+            end
+
+            [   "/tmp",
+                "/var/tmp",
+                "/dev/shm"].each do |file|
+                runChownCommand("root:root #{file}")
+                runChmodCommand("1777 #{file}")
+            end
+
+            runChownCommand("root:root /root")
+            runChmodCommand("0750 /root")
+
+            runChownCommand("root:utmp /var/log/lastlog")
+            runChmodCommand("0664 /root")
+
+            runChownCommand("root:root /var/log/btmp")
+            runChmodCommand("0600 /root")
+
+            [   "/lib32",
+                "/libx32",
+                "/lib64",
+                "/usr",
+                "/var",
+                "/etc",
+                "/bin",
+                "/sbin",
+                "/boot"].each do |file|
+                runChownCommand("root:root #{file}")
+                runChmodCommand("0755 #{file}")
+            end
         end
 
     end
