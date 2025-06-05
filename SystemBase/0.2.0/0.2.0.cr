@@ -124,8 +124,8 @@ class Target < ISM::SemiVirtualSoftware
         if !passEnabled
             recordCrossToolchainAsFullyBuilt
 
-            [   Ism.settings.sourcesPath,
-                Ism.settings.rootPath,
+            [   "/sources",
+                "/tools",
                 "/etc/ism",
                 "/var/ism",
                 "/tmp/ism",
