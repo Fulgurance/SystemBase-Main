@@ -150,9 +150,7 @@ class Target < ISM::SemiVirtualSoftware
             runChownCommand("root:root /var/log/btmp")
             runChmodCommand("0600 /root")
 
-            [   "/lib32",
-                "/libx32",
-                "/lib64",
+            [   "/lib64",
                 "/usr",
                 "/var",
                 "/etc",
