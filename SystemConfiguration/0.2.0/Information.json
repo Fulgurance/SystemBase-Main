@@ -213,13 +213,13 @@
       "kernelDependencies": []
     },
     {
-      "name": "Library",
-      "description": "Enable library support",
+      "name": "C-Library",
+      "description": "Enable C library support",
       "active": true,
       "dependencies": [
         {
           "port": "Components-Main",
-          "name": "Library",
+          "name": "C-Library",
           "version": ">=0.0.0",
           "options": []
         }
