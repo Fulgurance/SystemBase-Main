@@ -1,0 +1,103 @@
+PORT
+    SystemBase-Main
+NAME
+    SystemBase
+VERSION
+    0.2.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Installer to prepare the system base hierarchy
+WEBSITE
+    https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemBase
+DEPENDENCIES
+        @SecuritySoftwares-Main:Shadow>=0.0.0
+        @ProgrammingTools-Main:Binutils>=0.0.0
+        @ProgrammingTools-Main:Gcc>=0.0.0
+        @Components-Main:C-Library>=0.2.0
+        @Utilities-Main:M4>=0.0.0
+        @BaseLibraries-Main:Ncurses>=0.0.0
+        @Shells-Main:Bash>=0.0.0
+        @Utilities-Main:Coreutils>=0.0.0
+        @ProgrammingTools-Main:Diffutils>=0.0.0
+        @Utilities-Main:File>=0.0.0
+        @Utilities-Main:Findutils>=0.0.0
+        @Utilities-Main:Gawk>=0.0.0
+        @Utilities-Main:Grep>=0.0.0
+        @Archivers-Main:Gzip>=0.0.0
+        @ProgrammingTools-Main:Make>=0.0.0
+        @ProgrammingTools-Main:Patch>=0.0.0
+        @Utilities-Main:Sed>=0.0.0
+        @Archivers-Main:Tar>=0.0.0
+        @Archivers-Main:Xz>=0.0.0
+        @Utilities-Main:Gettext>=0.0.0
+        @ProgrammingTools-Main:Bison>=0.0.0
+        @ProgrammingLanguages-Main:Perl>=0.0.0
+        @ProgrammingLanguages-Main:Python>=0.0.0
+        @Utilities-Main:Texinfo>=0.0.0
+        @Utilities-Main:Util-Linux>=0.0.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Multilib
+    description: Enable multilib support
+    active: false
+    dependencies:
+    kernelDependencies:
+
+    name: Pass1
+    description: Enable the phase 1 building of the system base
+    active: false
+    dependencies:
+        @Components-Main:Architecture>=0.2.0
+    kernelDependencies:
+
+    name: Pass2
+    description: Enable the phase 2 building of the system base
+    active: false
+    dependencies:
+        @SystemBase-Main:ChrootBase>=0.2.0
+    kernelDependencies:
+
+    name: Pass3
+    description: Enable the phase 3 building of the system base
+    active: false
+    dependencies:
+        @Utilities-Main:Util-Linux>=0.0.0(Pass1)
+        @SystemGroups-Main:Root>=0.1.0
+        @SystemGroups-Main:Bin>=0.1.0
+        @SystemGroups-Main:Sys>=0.1.0
+        @SystemGroups-Main:Kmem>=0.1.0
+        @SystemGroups-Main:Tape>=0.1.0
+        @SystemGroups-Main:Tty>=0.1.0
+        @SystemGroups-Main:Daemon>=0.1.0
+        @SystemGroups-Main:Floppy>=0.1.0
+        @SystemGroups-Main:Disk>=0.1.0
+        @SystemGroups-Main:Lp>=0.1.0
+        @SystemGroups-Main:Dialout>=0.1.0
+        @SystemGroups-Main:Audio>=0.1.0
+        @SystemGroups-Main:Video>=0.1.0
+        @SystemGroups-Main:Utmp>=0.1.0
+        @SystemGroups-Main:Usb>=0.1.0
+        @SystemGroups-Main:Cdrom>=0.1.0
+        @SystemGroups-Main:Adm>=0.1.0
+        @SystemGroups-Main:Messagebus>=0.1.0
+        @SystemGroups-Main:Input>=0.1.0
+        @SystemGroups-Main:Mail>=0.1.0
+        @SystemGroups-Main:Kvm>=0.1.0
+        @SystemGroups-Main:Uuidd>=0.1.0
+        @SystemGroups-Main:Wheel>=0.1.0
+        @SystemGroups-Main:Users>=0.1.0
+        @SystemGroups-Main:Nogroup>=0.1.0
+        @SystemGroups-Main:Ism>=0.1.0
+        @SystemUsers-Main:Root>=0.1.0
+        @SystemUsers-Main:Bin>=0.1.0
+        @SystemUsers-Main:Daemon>=0.1.0
+        @SystemUsers-Main:Messagebus>=0.1.0
+        @SystemUsers-Main:Uuidd>=0.1.0
+        @SystemUsers-Main:Nobody>=0.1.0
+        @SystemUsers-Main:Ism>=0.1.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

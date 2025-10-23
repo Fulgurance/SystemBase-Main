@@ -1,0 +1,124 @@
+PORT
+    SystemBase-Main
+NAME
+    SystemConfiguration
+VERSION
+    0.2.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Installer to prepare the system configuration
+WEBSITE
+    https://github.com/Fulgurance/SystemBase-Main/tree/master/SystemConfiguration
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.0.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Architecture
+    description: Enable architecture support
+    active: true
+    dependencies:
+        @Components-Main:Architecture>=0.0.0
+    kernelDependencies:
+
+    name: Bootloader
+    description: Enable bootloader support
+    active: true
+    dependencies:
+        @Components-Main:Bootloader>=0.0.0
+    kernelDependencies:
+
+    name: Kernel
+    description: Enable kernel support
+    active: true
+    dependencies:
+        @Components-Main:Kernel>=0.0.0
+    kernelDependencies:
+
+    name: Init
+    description: Enable init support
+    active: true
+    dependencies:
+        @Components-Main:Init>=0.0.0
+    kernelDependencies:
+
+    name: FileSystem
+    description: Enable file system support
+    active: true
+    dependencies:
+        @Components-Main:FileSystem>=0.0.0
+    kernelDependencies:
+
+    name: Language
+    description: Enable language support
+    active: true
+    dependencies:
+        @Components-Main:Language>=0.0.0
+    kernelDependencies:
+
+    name: Timezone
+    description: Enable timezone support
+    active: true
+    dependencies:
+        @Components-Main:Timezone>=0.0.0
+    kernelDependencies:
+
+    name: Shell
+    description: Enable shell support
+    active: true
+    dependencies:
+        @Components-Main:Shell>=0.0.0
+    kernelDependencies:
+
+    name: Logger
+    description: Enable system logger support
+    active: true
+    dependencies:
+        @Components-Main:Logger>=0.0.0
+    kernelDependencies:
+
+    name: Cron
+    description: Enable cron support
+    active: true
+    dependencies:
+        @Components-Main:Cron>=0.0.0
+    kernelDependencies:
+
+    name: WindowManager
+    description: Enable window manager support
+    active: true
+    dependencies:
+        @Components-Main:WindowManager>=0.0.0
+    kernelDependencies:
+
+    name: DisplayManager
+    description: Enable display manager support
+    active: true
+    dependencies:
+        @Components-Main:DisplayManager>=0.0.0
+    kernelDependencies:
+
+    name: GraphicalServer
+    description: Enable GraphicalServer support
+    active: true
+    dependencies:
+        @Components-Main:GraphicalServer>=0.0.0
+    kernelDependencies:
+
+    name: DesktopEnvironment
+    description: Enable desktop environment support
+    active: true
+    dependencies:
+        @Components-Main:DesktopEnvironment>=0.0.0
+    kernelDependencies:
+
+    name: C-Library
+    description: Enable C library support
+    active: true
+    dependencies:
+        @Components-Main:C-Library>=0.0.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
